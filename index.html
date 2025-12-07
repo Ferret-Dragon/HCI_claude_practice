@@ -1,0 +1,1557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HCI Exam Review - Interactive Study Tool</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #ec4899;
+            --accent: #14b8a6;
+            --success: #22c55e;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --bg-light: #f1f5f9;
+            --text-light: #f8fafc;
+            --text-dark: #0f172a;
+            --text-muted: #94a3b8;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: var(--text-light);
+            overflow-x: hidden;
+        }
+
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3em;
+            font-weight: 700;
+            background: linear-gradient(135deg, #fff 0%, #a5f3fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+            text-shadow: 0 0 30px rgba(165, 243, 252, 0.5);
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            color: var(--text-muted);
+            font-weight: 300;
+        }
+
+        .mode-selection {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .mode-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mode-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(236, 72, 153, 0.2));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .mode-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-color: var(--primary);
+        }
+
+        .mode-card:hover::before {
+            opacity: 1;
+        }
+
+        .mode-card.active {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-color: white;
+            transform: scale(1.05);
+        }
+
+        .mode-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .mode-title {
+            font-size: 1.3em;
+            font-weight: 600;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .settings-panel {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .setting-group {
+            margin-bottom: 25px;
+        }
+
+        .setting-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+
+        select, input[type="number"] {
+            width: 100%;
+            padding: 12px;
+            border-radius: 10px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 1em;
+            font-family: 'Poppins', sans-serif;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        select:focus, input[type="number"]:focus {
+            outline: none;
+            border-color: var(--accent);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        select option {
+            background: var(--bg-dark);
+            color: white;
+        }
+
+        .category-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .chip {
+            padding: 8px 16px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9em;
+        }
+
+        .chip:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .chip.selected {
+            background: var(--accent);
+            border-color: var(--accent);
+            font-weight: 600;
+        }
+
+        .btn {
+            padding: 15px 40px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(99, 102, 241, 0.6);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .quiz-container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 30px 0;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent), var(--success));
+            transition: width 0.3s ease;
+            border-radius: 10px;
+        }
+
+        .question-counter {
+            text-align: center;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            color: white;
+            border-radius: 15px;
+            padding: 40px;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .card.flipped {
+            transform: rotateY(180deg);
+        }
+
+        .card-front, .card-back {
+            backface-visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 40px;
+            border-radius: 15px;
+        }
+
+        .card-back {
+            transform: rotateY(180deg);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .term-name {
+            font-size: 2em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .definition {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: white;
+        }
+
+        .card-back .definition {
+            color: white;
+        }
+
+        .answer-options {
+            display: grid;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .answer-option {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: white;
+            font-size: 1.05em;
+        }
+
+        .answer-option:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .answer-option.correct {
+            background: var(--success);
+            color: white;
+            border-color: var(--success);
+        }
+
+        .answer-option.wrong {
+            background: var(--danger);
+            color: white;
+            border-color: var(--danger);
+        }
+
+        .fill-blank-container {
+            margin-top: 30px;
+        }
+
+        .fill-blank-text {
+            font-size: 1.2em;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 10px;
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .blank-input {
+            display: inline-block;
+            min-width: 200px;
+            padding: 8px 15px;
+            border: none;
+            border-bottom: 3px solid var(--accent);
+            background: rgba(255, 255, 255, 0.1);
+            font-size: 1.1em;
+            font-weight: 600;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .blank-input:focus {
+            outline: none;
+            border-bottom-color: var(--accent);
+        }
+
+        .blank-input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .matching-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .matching-column {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .matching-item {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: white;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .matching-item:hover {
+            transform: scale(1.02);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .matching-item.selected {
+            border-color: var(--accent);
+            background: var(--accent);
+            color: white;
+        }
+
+        .matching-item.matched {
+            background: var(--success);
+            color: white;
+            cursor: default;
+            opacity: 0.9;
+            border-color: var(--success);
+        }
+
+        .results-screen {
+            text-align: center;
+            padding: 40px;
+        }
+
+        .score-display {
+            font-size: 5em;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--success), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 30px 0;
+        }
+
+        .score-message {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        .controls {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .mode-selection {
+                grid-template-columns: 1fr;
+            }
+
+            .matching-container {
+                grid-template-columns: 1fr;
+            }
+
+            .quiz-container {
+                padding: 20px;
+            }
+        }
+
+        .loading {
+            text-align: center;
+            padding: 100px 20px;
+            font-size: 1.5em;
+        }
+
+        .spinner {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top: 4px solid white;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .review-container {
+            max-height: 600px;
+            overflow-y: auto;
+            padding: 20px;
+        }
+
+        .review-item {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+
+        .review-item.correct {
+            border-left: 5px solid var(--success);
+        }
+
+        .review-item.incorrect {
+            border-left: 5px solid var(--danger);
+        }
+
+        .review-question {
+            font-size: 1.3em;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .review-label {
+            font-size: 0.9em;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+
+        .review-answer {
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .review-answer.user-answer {
+            background: rgba(99, 102, 241, 0.2);
+        }
+
+        .review-answer.correct-answer {
+            background: rgba(34, 197, 94, 0.2);
+        }
+
+        .categorize-container {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .terms-pool {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 2px dashed rgba(255, 255, 255, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            min-height: 400px;
+        }
+
+        .terms-pool h3 {
+            color: white;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .category-box {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            min-height: 250px;
+        }
+
+        .category-box.drag-over {
+            background: rgba(20, 184, 166, 0.3);
+            border-color: var(--accent);
+            transform: scale(1.02);
+        }
+
+        .category-header {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 15px;
+            text-align: center;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .category-items {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            min-height: 180px;
+        }
+
+        .draggable-term {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            padding: 12px 15px;
+            cursor: move;
+            transition: all 0.3s ease;
+            color: white;
+            font-weight: 500;
+            user-select: none;
+        }
+
+        .draggable-term:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .draggable-term.dragging {
+            opacity: 0.5;
+            transform: rotate(5deg);
+        }
+
+        .draggable-term.correct {
+            background: var(--success);
+            border-color: var(--success);
+            cursor: default;
+        }
+
+        .draggable-term.incorrect {
+            background: var(--danger);
+            border-color: var(--danger);
+            animation: shake 0.5s;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            75% { transform: translateX(10px); }
+        }
+
+        .categorize-instructions {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+            color: white;
+            text-align: center;
+        }
+
+        .categorize-score {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 20px;
+            color: white;
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+
+        @media (max-width: 1024px) {
+            .categorize-container {
+                grid-template-columns: 1fr;
+            }
+
+            .terms-pool {
+                order: 2;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+
+    <div class="container">
+        <header>
+            <h1>🧠 HCI Exam Review</h1>
+            <p class="subtitle">Interactive Study Tool - Master Your Concepts!</p>
+        </header>
+
+        <!-- Loading Screen -->
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+            <p>Loading study materials...</p>
+        </div>
+
+        <!-- Setup Screen -->
+        <div id="setup-screen" class="hidden">
+            <!-- Mode Selection -->
+            <div class="mode-selection">
+                <div class="mode-card" data-mode="flashcards">
+                    <div class="mode-icon">🎴</div>
+                    <div class="mode-title">Flashcards</div>
+                    <p>Flip cards to review terms and definitions</p>
+                </div>
+                <div class="mode-card" data-mode="multiple-choice">
+                    <div class="mode-icon">✅</div>
+                    <div class="mode-title">Multiple Choice</div>
+                    <p>Test your knowledge with quiz questions</p>
+                </div>
+                <div class="mode-card" data-mode="fill-blank">
+                    <div class="mode-icon">✏️</div>
+                    <div class="mode-title">Fill in the Blank</div>
+                    <p>Complete the missing terms</p>
+                </div>
+                <div class="mode-card" data-mode="matching">
+                    <div class="mode-icon">🔗</div>
+                    <div class="mode-title">Card Matching</div>
+                    <p>Match terms with their definitions</p>
+                </div>
+                <div class="mode-card" data-mode="categorize">
+                    <div class="mode-icon">🗂️</div>
+                    <div class="mode-title">Model Categorization</div>
+                    <p>Sort terms into model type categories</p>
+                </div>
+            </div>
+
+            <!-- Settings Panel -->
+            <div class="settings-panel">
+                <div class="setting-group">
+                    <label>Select Categories:</label>
+                    <div class="category-chips" id="category-chips"></div>
+                </div>
+
+                <div class="setting-group">
+                    <label for="num-questions">Number of Questions:</label>
+                    <input type="number" id="num-questions" min="5" max="50" value="10">
+                </div>
+
+                <div style="text-align: center; margin-top: 30px;">
+                    <button class="btn btn-primary" id="start-btn">Start Studying! 🚀</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quiz-screen" class="hidden">
+            <div class="quiz-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <div class="question-counter" id="question-counter"></div>
+                <div id="quiz-content"></div>
+                <div class="controls">
+                    <button class="btn btn-secondary" id="prev-btn">← Previous</button>
+                    <button class="btn btn-primary" id="next-btn">Next →</button>
+                    <button class="btn btn-secondary" id="quit-btn">Quit</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="results-screen" class="hidden">
+            <div class="results-screen quiz-container">
+                <h2>🎉 Quiz Complete!</h2>
+                <div class="score-display" id="final-score">0%</div>
+                <div class="score-message" id="score-message"></div>
+                <div class="controls">
+                    <button class="btn btn-primary" id="restart-btn">Study Again</button>
+                    <button class="btn btn-secondary" id="review-btn">Review Answers</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Review Screen -->
+        <div id="review-screen" class="hidden">
+            <div class="quiz-container">
+                <h2 style="text-align: center; margin-bottom: 30px;">📝 Review Your Answers</h2>
+                <div class="review-container" id="review-content"></div>
+                <div class="controls">
+                    <button class="btn btn-primary" id="back-to-results-btn">← Back to Results</button>
+                    <button class="btn btn-secondary" id="restart-from-review-btn">Study Again</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Global state
+        let hciData = null;
+        let currentMode = null;
+        let selectedCategories = [];
+        let questions = [];
+        let currentQuestionIndex = 0;
+        let userAnswers = [];
+        let score = 0;
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', init);
+
+        async function init() {
+            createStars();
+            await loadData();
+            setupEventListeners();
+            renderCategories();
+            document.getElementById('loading').classList.add('hidden');
+            document.getElementById('setup-screen').classList.remove('hidden');
+        }
+
+        function createStars() {
+            const starsContainer = document.getElementById('stars');
+            for (let i = 0; i < 50; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.width = Math.random() * 3 + 1 + 'px';
+                star.style.height = star.style.width;
+                star.style.animationDelay = Math.random() * 3 + 's';
+                starsContainer.appendChild(star);
+            }
+        }
+
+        async function loadData() {
+            try {
+                const response = await fetch('hci_data.json');
+                hciData = await response.json();
+            } catch (error) {
+                console.error('Error loading data:', error);
+                alert('Error loading study data. Please make sure hci_data.json is in the same directory.');
+            }
+        }
+
+        function setupEventListeners() {
+            // Mode selection
+            document.querySelectorAll('.mode-card').forEach(card => {
+                card.addEventListener('click', () => {
+                    document.querySelectorAll('.mode-card').forEach(c => c.classList.remove('active'));
+                    card.classList.add('active');
+                    currentMode = card.dataset.mode;
+                });
+            });
+
+            // Start button
+            document.getElementById('start-btn').addEventListener('click', startQuiz);
+
+            // Navigation buttons
+            document.getElementById('next-btn').addEventListener('click', nextQuestion);
+            document.getElementById('prev-btn').addEventListener('click', prevQuestion);
+            document.getElementById('quit-btn').addEventListener('click', quitQuiz);
+            document.getElementById('restart-btn').addEventListener('click', () => {
+                document.getElementById('results-screen').classList.add('hidden');
+                document.getElementById('setup-screen').classList.remove('hidden');
+            });
+            document.getElementById('review-btn').addEventListener('click', showReview);
+            document.getElementById('back-to-results-btn').addEventListener('click', () => {
+                document.getElementById('review-screen').classList.add('hidden');
+                document.getElementById('results-screen').classList.remove('hidden');
+            });
+            document.getElementById('restart-from-review-btn').addEventListener('click', () => {
+                document.getElementById('review-screen').classList.add('hidden');
+                document.getElementById('setup-screen').classList.remove('hidden');
+            });
+        }
+
+        function renderCategories() {
+            const container = document.getElementById('category-chips');
+            container.innerHTML = '';
+
+            // Add "All" option
+            const allChip = document.createElement('div');
+            allChip.className = 'chip selected';
+            allChip.textContent = 'All Topics';
+            allChip.dataset.categoryId = 'all';
+            allChip.addEventListener('click', () => toggleCategory(allChip));
+            container.appendChild(allChip);
+
+            // Add individual categories
+            hciData.categories.forEach(cat => {
+                const chip = document.createElement('div');
+                chip.className = 'chip';
+                chip.textContent = cat.name;
+                chip.dataset.categoryId = cat.id;
+                chip.addEventListener('click', () => toggleCategory(chip));
+                container.appendChild(chip);
+            });
+
+            selectedCategories = ['all'];
+        }
+
+        function toggleCategory(chip) {
+            const categoryId = chip.dataset.categoryId;
+
+            if (categoryId === 'all') {
+                document.querySelectorAll('.chip').forEach(c => c.classList.remove('selected'));
+                chip.classList.add('selected');
+                selectedCategories = ['all'];
+            } else {
+                document.querySelector('[data-category-id="all"]').classList.remove('selected');
+                chip.classList.toggle('selected');
+
+                if (chip.classList.contains('selected')) {
+                    selectedCategories = selectedCategories.filter(id => id !== 'all');
+                    selectedCategories.push(parseInt(categoryId));
+                } else {
+                    selectedCategories = selectedCategories.filter(id => id !== parseInt(categoryId));
+                }
+
+                if (selectedCategories.length === 0) {
+                    document.querySelector('[data-category-id="all"]').classList.add('selected');
+                    selectedCategories = ['all'];
+                }
+            }
+        }
+
+        function startQuiz() {
+            if (!currentMode) {
+                alert('Please select a study mode!');
+                return;
+            }
+
+            const numQuestions = parseInt(document.getElementById('num-questions').value);
+
+            // Filter terms by selected categories
+            let availableTerms = hciData.terms;
+            if (!selectedCategories.includes('all')) {
+                availableTerms = availableTerms.filter(term =>
+                    selectedCategories.includes(term.categoryId)
+                );
+            }
+
+            // Shuffle and select questions
+            const shuffled = availableTerms.sort(() => 0.5 - Math.random());
+            questions = shuffled.slice(0, Math.min(numQuestions, shuffled.length));
+
+            // Initialize quiz state
+            currentQuestionIndex = 0;
+            userAnswers = new Array(questions.length).fill(null);
+            score = 0;
+
+            // Show quiz screen
+            document.getElementById('setup-screen').classList.add('hidden');
+            document.getElementById('quiz-screen').classList.remove('hidden');
+
+            renderQuestion();
+        }
+
+        function renderQuestion() {
+            updateProgress();
+
+            const content = document.getElementById('quiz-content');
+            const question = questions[currentQuestionIndex];
+
+            switch (currentMode) {
+                case 'flashcards':
+                    renderFlashcard(content, question);
+                    break;
+                case 'multiple-choice':
+                    renderMultipleChoice(content, question);
+                    break;
+                case 'fill-blank':
+                    renderFillBlank(content, question);
+                    break;
+                case 'matching':
+                    renderMatching(content, question);
+                    break;
+                case 'categorize':
+                    renderCategorize(content);
+                    break;
+            }
+
+            // Update navigation buttons
+            document.getElementById('prev-btn').disabled = currentQuestionIndex === 0;
+            document.getElementById('next-btn').textContent =
+                currentQuestionIndex === questions.length - 1 ? 'Finish 🎉' : 'Next →';
+        }
+
+        function renderFlashcard(container, term) {
+            container.innerHTML = `
+                <div class="card" id="flashcard">
+                    <div class="card-front">
+                        <div class="term-name">${term.name}</div>
+                        <p style="color: #94a3b8; margin-top: 20px;">Click to reveal definition</p>
+                    </div>
+                    <div class="card-back">
+                        <div class="definition">${term.definition}</div>
+                        <p style="margin-top: 20px; font-size: 0.9em; opacity: 0.8;">Click to flip back</p>
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('flashcard').addEventListener('click', function() {
+                this.classList.toggle('flipped');
+            });
+        }
+
+        function renderMultipleChoice(container, term) {
+            // Generate wrong answers
+            const wrongAnswers = hciData.terms
+                .filter(t => t.id !== term.id)
+                .sort(() => 0.5 - Math.random())
+                .slice(0, 3)
+                .map(t => t.definition);
+
+            const allAnswers = [term.definition, ...wrongAnswers].sort(() => 0.5 - Math.random());
+
+            const savedAnswer = userAnswers[currentQuestionIndex];
+
+            container.innerHTML = `
+                <div class="term-name">${term.name}</div>
+                <p style="font-size: 1.2em; margin: 20px 0;">What is the definition of this term?</p>
+                <div class="answer-options">
+                    ${allAnswers.map((answer, i) => `
+                        <div class="answer-option ${savedAnswer === answer ? 'selected' : ''}"
+                             data-answer="${answer}">
+                            ${String.fromCharCode(65 + i)}. ${answer}
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+
+            document.querySelectorAll('.answer-option').forEach(option => {
+                option.addEventListener('click', function() {
+                    document.querySelectorAll('.answer-option').forEach(o => {
+                        o.classList.remove('selected', 'correct', 'wrong');
+                    });
+
+                    const selectedAnswer = this.dataset.answer;
+                    userAnswers[currentQuestionIndex] = selectedAnswer;
+
+                    this.classList.add('selected');
+
+                    // Show if correct/wrong
+                    if (selectedAnswer === term.definition) {
+                        this.classList.add('correct');
+                    } else {
+                        this.classList.add('wrong');
+                        document.querySelectorAll('.answer-option').forEach(o => {
+                            if (o.dataset.answer === term.definition) {
+                                o.classList.add('correct');
+                            }
+                        });
+                    }
+                });
+            });
+        }
+
+        function renderFillBlank(container, term) {
+            // Create a fill-in-the-blank from the definition
+            const words = term.name.split(' ');
+            const blankWord = words[Math.floor(words.length / 2)];
+
+            const savedAnswer = userAnswers[currentQuestionIndex];
+
+            container.innerHTML = `
+                <div class="fill-blank-container">
+                    <h3 style="margin-bottom: 20px;">Fill in the blank:</h3>
+                    <div class="fill-blank-text">
+                        ${term.definition}
+                        <p style="margin-top: 30px; font-size: 1.3em; font-weight: 600;">
+                            This describes: <input type="text" class="blank-input" id="blank-answer"
+                                value="${savedAnswer || ''}" placeholder="Type your answer...">
+                        </p>
+                    </div>
+                    <button class="btn btn-primary" style="margin-top: 20px;" id="check-blank">
+                        Check Answer
+                    </button>
+                    <div id="blank-feedback" style="margin-top: 20px; font-size: 1.2em;"></div>
+                </div>
+            `;
+
+            document.getElementById('check-blank').addEventListener('click', () => {
+                const answer = document.getElementById('blank-answer').value.trim();
+                userAnswers[currentQuestionIndex] = answer;
+
+                const feedback = document.getElementById('blank-feedback');
+                const isCorrect = answer.toLowerCase() === term.name.toLowerCase();
+
+                if (isCorrect) {
+                    feedback.innerHTML = '✅ Correct!';
+                    feedback.style.color = 'var(--success)';
+                } else {
+                    feedback.innerHTML = `❌ Incorrect. The answer is: <strong>${term.name}</strong>`;
+                    feedback.style.color = 'var(--danger)';
+                }
+            });
+        }
+
+        function renderMatching(container, term) {
+            // Get 3 other random terms for matching
+            const otherTerms = hciData.terms
+                .filter(t => t.id !== term.id)
+                .sort(() => 0.5 - Math.random())
+                .slice(0, 3);
+
+            const allTerms = [term, ...otherTerms].sort(() => 0.5 - Math.random());
+            const allDefinitions = [...allTerms].sort(() => 0.5 - Math.random());
+
+            container.innerHTML = `
+                <h3 style="margin-bottom: 20px; text-align: center;">Match the terms with their definitions</h3>
+                <div class="matching-container">
+                    <div class="matching-column">
+                        <h4 style="text-align: center; margin-bottom: 15px;">Terms</h4>
+                        ${allTerms.map((t, i) => `
+                            <div class="matching-item" data-type="term" data-id="${t.id}">
+                                ${t.name}
+                            </div>
+                        `).join('')}
+                    </div>
+                    <div class="matching-column">
+                        <h4 style="text-align: center; margin-bottom: 15px;">Definitions</h4>
+                        ${allDefinitions.map((t, i) => `
+                            <div class="matching-item" data-type="definition" data-id="${t.id}">
+                                ${t.definition}
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+
+            let selectedTerm = null;
+            let selectedDef = null;
+            let matches = 0;
+
+            document.querySelectorAll('.matching-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    if (this.classList.contains('matched')) return;
+
+                    const type = this.dataset.type;
+                    const id = this.dataset.id;
+
+                    if (type === 'term') {
+                        document.querySelectorAll('[data-type="term"]').forEach(t =>
+                            t.classList.remove('selected'));
+                        this.classList.add('selected');
+                        selectedTerm = id;
+                    } else {
+                        document.querySelectorAll('[data-type="definition"]').forEach(d =>
+                            d.classList.remove('selected'));
+                        this.classList.add('selected');
+                        selectedDef = id;
+                    }
+
+                    if (selectedTerm && selectedDef) {
+                        if (selectedTerm === selectedDef) {
+                            // Correct match!
+                            document.querySelectorAll(`.matching-item[data-id="${selectedTerm}"]`)
+                                .forEach(item => {
+                                    item.classList.remove('selected');
+                                    item.classList.add('matched');
+                                });
+                            matches++;
+
+                            if (matches === allTerms.length) {
+                                userAnswers[currentQuestionIndex] = 'completed';
+                                setTimeout(() => {
+                                    alert('🎉 All matched correctly!');
+                                }, 300);
+                            }
+                        } else {
+                            // Wrong match
+                            setTimeout(() => {
+                                document.querySelectorAll('.matching-item.selected')
+                                    .forEach(item => item.classList.remove('selected'));
+                            }, 500);
+                        }
+
+                        selectedTerm = null;
+                        selectedDef = null;
+                    }
+                });
+            });
+        }
+
+        function renderCategorize(container) {
+            // Define model categories and their associated terms
+            const modelCategories = {
+                'User Models': ['User Personas', 'Work Roles', 'User Classes', 'Social Models'],
+                'Usage Models': ['Flow Model', 'Hierarchical Task Inventory', 'Usage Scenarios', 'Step-by-Step Task Interaction Model'],
+                'Work Environment Models': ['Artifact Model', 'Physical Model'],
+                'UX Process': ['UX Lifecycle, the Wheel', 'Iteration', 'Analysis', 'Design', 'Prototyping', 'Evaluation'],
+                'Design Paradigms': ['Engineering Paradigm', 'Human-Information Processing (HIP) Paradigm', 'Design-Thinking Paradigm'],
+                'Evaluation Methods': ['Formative vs. Summative', 'Analytic vs. Empirical', 'Heuristic Evaluation', 'RITE']
+            };
+
+            // Get terms that exist in our dataset
+            const availableTerms = [];
+            const categoryMapping = {};
+
+            Object.keys(modelCategories).forEach(category => {
+                modelCategories[category].forEach(termName => {
+                    const term = hciData.terms.find(t => t.name === termName);
+                    if (term) {
+                        availableTerms.push(term);
+                        categoryMapping[term.id] = category;
+                    }
+                });
+            });
+
+            // Shuffle terms for the pool
+            const shuffledTerms = [...availableTerms].sort(() => 0.5 - Math.random())
+                .slice(0, Math.min(12, availableTerms.length));
+
+            // Create UI
+            container.innerHTML = `
+                <div class="categorize-instructions">
+                    <strong>📚 Drag and Drop:</strong> Move each term from the pool into its correct category.
+                    Instant feedback will show if you're correct!
+                </div>
+                <div class="categorize-container">
+                    <div class="terms-pool" id="terms-pool">
+                        <h3>📋 Terms</h3>
+                        <div id="pool-items"></div>
+                    </div>
+                    <div class="categories-grid" id="categories-grid"></div>
+                </div>
+                <div class="categorize-score" id="categorize-score">
+                    Correct: <span id="correct-count">0</span> / ${shuffledTerms.length}
+                </div>
+            `;
+
+            // Render categories
+            const categoriesGrid = document.getElementById('categories-grid');
+            Object.keys(modelCategories).forEach(categoryName => {
+                const categoryDiv = document.createElement('div');
+                categoryDiv.className = 'category-box';
+                categoryDiv.dataset.category = categoryName;
+                categoryDiv.innerHTML = `
+                    <div class="category-header">${categoryName}</div>
+                    <div class="category-items"></div>
+                `;
+                categoriesGrid.appendChild(categoryDiv);
+
+                // Add drop zone event listeners
+                const categoryItems = categoryDiv.querySelector('.category-items');
+                categoryItems.addEventListener('dragover', handleDragOver);
+                categoryItems.addEventListener('drop', handleDrop);
+                categoryItems.addEventListener('dragleave', handleDragLeave);
+            });
+
+            // Render draggable terms in pool
+            const poolItems = document.getElementById('pool-items');
+            shuffledTerms.forEach(term => {
+                const termDiv = document.createElement('div');
+                termDiv.className = 'draggable-term';
+                termDiv.draggable = true;
+                termDiv.dataset.termId = term.id;
+                termDiv.dataset.correctCategory = categoryMapping[term.id];
+                termDiv.textContent = term.name;
+                poolItems.appendChild(termDiv);
+
+                // Add drag event listeners
+                termDiv.addEventListener('dragstart', handleDragStart);
+                termDiv.addEventListener('dragend', handleDragEnd);
+            });
+
+            let correctCount = 0;
+
+            function handleDragStart(e) {
+                e.target.classList.add('dragging');
+                e.dataTransfer.effectAllowed = 'move';
+                e.dataTransfer.setData('text/html', e.target.innerHTML);
+            }
+
+            function handleDragEnd(e) {
+                e.target.classList.remove('dragging');
+            }
+
+            function handleDragOver(e) {
+                if (e.preventDefault) {
+                    e.preventDefault();
+                }
+                e.dataTransfer.dropEffect = 'move';
+                const categoryBox = e.target.closest('.category-box');
+                if (categoryBox) {
+                    categoryBox.classList.add('drag-over');
+                }
+                return false;
+            }
+
+            function handleDragLeave(e) {
+                const categoryBox = e.target.closest('.category-box');
+                if (categoryBox) {
+                    categoryBox.classList.remove('drag-over');
+                }
+            }
+
+            function handleDrop(e) {
+                if (e.stopPropagation) {
+                    e.stopPropagation();
+                }
+                e.preventDefault();
+
+                const draggingElement = document.querySelector('.dragging');
+                if (!draggingElement) return;
+
+                const categoryBox = e.target.closest('.category-box');
+                if (!categoryBox) return;
+
+                categoryBox.classList.remove('drag-over');
+
+                const droppedCategory = categoryBox.dataset.category;
+                const correctCategory = draggingElement.dataset.correctCategory;
+
+                // Move the term to the category
+                const categoryItems = categoryBox.querySelector('.category-items');
+                categoryItems.appendChild(draggingElement);
+
+                // Check if correct
+                if (droppedCategory === correctCategory) {
+                    draggingElement.classList.add('correct');
+                    draggingElement.draggable = false;
+                    correctCount++;
+                    document.getElementById('correct-count').textContent = correctCount;
+
+                    if (correctCount === shuffledTerms.length) {
+                        userAnswers[currentQuestionIndex] = 'completed';
+                        setTimeout(() => {
+                            alert('🎉 Perfect! All terms categorized correctly!');
+                        }, 300);
+                    }
+                } else {
+                    draggingElement.classList.add('incorrect');
+                    setTimeout(() => {
+                        draggingElement.classList.remove('incorrect');
+                        // Move back to pool
+                        poolItems.appendChild(draggingElement);
+                    }, 1000);
+                }
+
+                return false;
+            }
+        }
+
+        function updateProgress() {
+            const progress = ((currentQuestionIndex + 1) / questions.length) * 100;
+            document.getElementById('progress-fill').style.width = progress + '%';
+            document.getElementById('question-counter').textContent =
+                `Question ${currentQuestionIndex + 1} of ${questions.length}`;
+        }
+
+        function nextQuestion() {
+            if (currentQuestionIndex < questions.length - 1) {
+                currentQuestionIndex++;
+                renderQuestion();
+            } else {
+                showResults();
+            }
+        }
+
+        function prevQuestion() {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                renderQuestion();
+            }
+        }
+
+        function quitQuiz() {
+            if (confirm('Are you sure you want to quit? Your progress will be lost.')) {
+                document.getElementById('quiz-screen').classList.add('hidden');
+                document.getElementById('setup-screen').classList.remove('hidden');
+            }
+        }
+
+        function showResults() {
+            // Calculate score for multiple choice and fill blank
+            let correctAnswers = 0;
+
+            if (currentMode === 'multiple-choice') {
+                userAnswers.forEach((answer, i) => {
+                    if (answer === questions[i].definition) {
+                        correctAnswers++;
+                    }
+                });
+            } else if (currentMode === 'fill-blank') {
+                userAnswers.forEach((answer, i) => {
+                    if (answer && answer.toLowerCase() === questions[i].name.toLowerCase()) {
+                        correctAnswers++;
+                    }
+                });
+            } else {
+                // For flashcards and matching, just count completion
+                correctAnswers = userAnswers.filter(a => a !== null).length;
+            }
+
+            const percentage = Math.round((correctAnswers / questions.length) * 100);
+
+            document.getElementById('quiz-screen').classList.add('hidden');
+            document.getElementById('results-screen').classList.remove('hidden');
+            document.getElementById('final-score').textContent = percentage + '%';
+
+            let message = '';
+            if (percentage >= 90) {
+                message = '🌟 Outstanding! You\'re ready for the exam!';
+            } else if (percentage >= 75) {
+                message = '👏 Great job! Keep up the good work!';
+            } else if (percentage >= 60) {
+                message = '👍 Good effort! Review the topics you missed.';
+            } else {
+                message = '📚 Keep studying! You\'ll get there!';
+            }
+
+            document.getElementById('score-message').innerHTML = `
+                ${message}<br><br>
+                You got <strong>${correctAnswers}</strong> out of <strong>${questions.length}</strong> correct!
+            `;
+        }
+
+        function showReview() {
+            const reviewContent = document.getElementById('review-content');
+            reviewContent.innerHTML = '';
+
+            questions.forEach((question, i) => {
+                const userAnswer = userAnswers[i];
+                let isCorrect = false;
+                let correctAnswer = '';
+
+                // Determine correct answer based on mode
+                if (currentMode === 'multiple-choice') {
+                    correctAnswer = question.definition;
+                    isCorrect = userAnswer === correctAnswer;
+                } else if (currentMode === 'fill-blank') {
+                    correctAnswer = question.name;
+                    isCorrect = userAnswer && userAnswer.toLowerCase() === correctAnswer.toLowerCase();
+                } else if (currentMode === 'matching') {
+                    isCorrect = userAnswer === 'completed';
+                    correctAnswer = 'All pairs matched correctly';
+                } else if (currentMode === 'categorize') {
+                    isCorrect = userAnswer === 'completed';
+                    correctAnswer = 'All terms categorized correctly';
+                } else {
+                    // Flashcards
+                    isCorrect = userAnswer !== null;
+                    correctAnswer = question.definition;
+                }
+
+                const reviewItem = document.createElement('div');
+                reviewItem.className = `review-item ${isCorrect ? 'correct' : 'incorrect'}`;
+
+                let reviewHTML = `
+                    <div class="review-question">
+                        ${i + 1}. ${question.name}
+                        <span style="float: right; font-size: 0.8em;">
+                            ${isCorrect ? '✅ Correct' : '❌ Incorrect'}
+                        </span>
+                    </div>
+                `;
+
+                if (currentMode === 'multiple-choice' || currentMode === 'fill-blank') {
+                    reviewHTML += `
+                        <div class="review-label">Your Answer:</div>
+                        <div class="review-answer user-answer">
+                            ${userAnswer || '<em>No answer provided</em>'}
+                        </div>
+                    `;
+
+                    if (!isCorrect) {
+                        reviewHTML += `
+                            <div class="review-label">Correct Answer:</div>
+                            <div class="review-answer correct-answer">
+                                ${correctAnswer}
+                            </div>
+                        `;
+                    }
+                } else if (currentMode === 'flashcards') {
+                    reviewHTML += `
+                        <div class="review-label">Definition:</div>
+                        <div class="review-answer">
+                            ${question.definition}
+                        </div>
+                    `;
+                } else if (currentMode === 'matching') {
+                    reviewHTML += `
+                        <div class="review-answer correct-answer">
+                            ${question.definition}
+                        </div>
+                    `;
+                } else if (currentMode === 'categorize') {
+                    reviewHTML += `
+                        <div class="review-label">Model Type Activity Completed</div>
+                        <div class="review-answer correct-answer">
+                            All terms successfully categorized into their model types
+                        </div>
+                    `;
+                }
+
+                reviewItem.innerHTML = reviewHTML;
+                reviewContent.appendChild(reviewItem);
+            });
+
+            document.getElementById('results-screen').classList.add('hidden');
+            document.getElementById('review-screen').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>

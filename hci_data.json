@@ -1,0 +1,1947 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "General",
+      "description": "Foundational HCI and UX concepts"
+    },
+    {
+      "id": 2,
+      "name": "UX in Software Engineering",
+      "description": "Integration of UX practices in software development"
+    },
+    {
+      "id": 3,
+      "name": "Overall UX Process",
+      "description": "The UX lifecycle and iterative process"
+    },
+    {
+      "id": 4,
+      "name": "Analysis",
+      "description": "Methods for understanding users, work, and requirements"
+    },
+    {
+      "id": 5,
+      "name": "Design",
+      "description": "Design thinking, conceptual design, and design production"
+    },
+    {
+      "id": 6,
+      "name": "Prototyping",
+      "description": "Creating and testing early versions of designs"
+    },
+    {
+      "id": 7,
+      "name": "Evaluation",
+      "description": "Methods for assessing and validating UX designs"
+    }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "text": "What does it mean?",
+      "order": 1
+    },
+    {
+      "id": 2,
+      "text": "Why is it important?",
+      "order": 2
+    },
+    {
+      "id": 3,
+      "text": "When and/or where is it used?",
+      "order": 3
+    },
+    {
+      "id": 4,
+      "text": "What are some examples?",
+      "order": 4
+    },
+    {
+      "id": 5,
+      "text": "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?",
+      "order": 5
+    },
+    {
+      "id": 6,
+      "text": "What does it look like to do this well?",
+      "order": 6
+    },
+    {
+      "id": 7,
+      "text": "How is it similar to or different than related terms?",
+      "order": 7
+    }
+  ],
+  "terms": [
+    {
+      "id": 1,
+      "categoryId": 1,
+      "name": "Human-Computer Interaction (HCI)",
+      "definition": "An interdisciplinary field focused on the design, evaluation, and implementation of interactive computing systems for human use and the study of major phenomena surrounding them.",
+      "answers": {
+        "What does it mean?": "HCI is the study and practice of designing, evaluating, and implementing interactive computing systems for human use. It encompasses understanding how people interact with technology and improving those interactions.",
+        "Why is it important?": "HCI is important because it ensures technology is usable, useful, and provides positive experiences. It bridges the gap between human capabilities/needs and technical possibilities, making technology accessible and effective.",
+        "When and/or where is it used?": "HCI is used throughout the entire software/product development lifecycle, from initial research and requirements gathering to design, implementation, and evaluation. It's applied in academia, industry, and any context where humans interact with computers.",
+        "What are some examples?": "Examples include: designing smartphone interfaces, creating accessible websites, developing voice assistants, improving medical device interfaces, and optimizing dashboard displays for cars.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "HCI is the overarching field that encompasses UX, UI design, usability engineering, and interaction design. It provides the theoretical foundation and research methods that inform all these practices.",
+        "What does it look like to do this well?": "Good HCI practice involves user-centered design, empirical evaluation, iterative refinement, consideration of diverse user needs, and applying established principles from psychology, design, and computer science.",
+        "How is it similar to or different than related terms?": "HCI is broader than UX (which focuses on overall experience) and UI (which focuses on interface elements). HCI includes research, theory, and empirical studies, while UX and UI are more practice-oriented. HCI is the academic/research field; UX/UI are professional practices."
+      }
+    },
+    {
+      "id": 2,
+      "categoryId": 1,
+      "name": "User Experience (UX)",
+      "definition": "The overall experience a person has when interacting with a product, system, or service, encompassing all aspects of the end-user's interaction including usability, usefulness, and emotional impact.",
+      "answers": {
+        "What does it mean?": "UX encompasses everything users experience when interacting with a product or service - from first impression to long-term satisfaction. It includes functional, emotional, and aesthetic dimensions of the interaction.",
+        "Why is it important?": "UX is critical because it determines whether users will adopt, continue using, and recommend a product. Good UX leads to user satisfaction, productivity, and business success; poor UX results in frustration, abandonment, and failure.",
+        "When and/or where is it used?": "UX is considered throughout the entire product lifecycle - from initial concept through design, development, launch, and ongoing improvements. It's practiced in software companies, design agencies, product teams, and any organization creating interactive products.",
+        "What are some examples?": "Examples include: the seamless experience of using an iPhone, the frustration of a confusing checkout process, the delight of a well-designed game, the efficiency of a professional tool like Adobe Photoshop.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "UX is a holistic concept that results from successfully combining usability, usefulness, and emotional impact. It's informed by HCI research and implemented through UI design, interaction design, and usability engineering practices.",
+        "What does it look like to do this well?": "Excellent UX is invisible - users accomplish their goals effortlessly without thinking about the interface. It involves deep understanding of user needs, thoughtful design decisions, attention to detail, and continuous iteration based on user feedback.",
+        "How is it similar to or different than related terms?": "UX is broader than UI (which is just the visual/interactive elements), more holistic than usability (which focuses on effectiveness/efficiency), and the practical outcome of HCI research. UX includes emotional and value aspects beyond pure functionality."
+      }
+    },
+    {
+      "id": 3,
+      "categoryId": 1,
+      "name": "User Interface (UI)",
+      "definition": "The visual and interactive elements through which users interact with a system, including screens, pages, buttons, icons, and other visual and interactive components.",
+      "answers": {
+        "What does it mean?": "UI refers to the specific visual and interactive elements users see and manipulate when using a system - the buttons, menus, forms, icons, typography, colors, and layout that constitute the interface.",
+        "Why is it important?": "UI is important because it's the primary means through which users interact with functionality. A well-designed UI makes systems intuitive and efficient; a poorly designed UI creates confusion and errors even if underlying functionality is strong.",
+        "When and/or where is it used?": "UI design occurs during the detailed design phase, after conceptual design is complete. It's implemented in all interactive systems - websites, mobile apps, desktop software, kiosks, smart devices, and embedded systems.",
+        "What are some examples?": "Examples include: the Windows taskbar and Start menu, iOS home screen and app icons, a website's navigation menu, the controls in a car dashboard, ATM screens and buttons.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "UI is the tangible manifestation of design decisions. It comes after UX research and conceptual design, implementing the interaction design through specific visual and interactive elements. UI is what users actually see and touch.",
+        "What does it look like to do this well?": "Good UI design is consistent, visually clear, follows established conventions while innovating where appropriate, provides clear affordances, gives immediate feedback, and is aesthetically pleasing without sacrificing usability.",
+        "How is it similar to or different than related terms?": "UI is a subset of UX (the visual/interactive layer vs. the overall experience). UI is more concrete than interaction design (which is conceptual). UI focuses on how things look and respond; UX focuses on how things feel and satisfy needs."
+      }
+    },
+    {
+      "id": 4,
+      "categoryId": 1,
+      "name": "Design",
+      "definition": "The intentional creative process of planning and making decisions about the form, function, and experience of a product or system to solve problems and meet user needs.",
+      "answers": {
+        "What does it mean?": "Design is the creative, intentional process of envisioning and specifying how something should work and appear to solve problems and meet user needs. It involves making informed decisions about form, function, and experience.",
+        "Why is it important?": "Design is crucial because it bridges user needs and technical capabilities. Good design makes products usable, useful, and delightful; it can differentiate products in the market and determine success or failure.",
+        "When and/or where is it used?": "Design occurs throughout the UX lifecycle, from early conceptual design through detailed design and refinement. It's practiced by UX designers, interaction designers, visual designers, and product designers across industries.",
+        "What are some examples?": "Examples include: sketching wireframes for a new app, creating a storyboard for a user flow, designing the interaction pattern for a gesture, choosing color schemes and typography, planning information architecture.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Design follows analysis and requirements gathering in the UX process. It involves ideation, conceptual design, iterative prototyping, and refinement. Design decisions are validated through evaluation and inform implementation.",
+        "What does it look like to do this well?": "Good design starts with deep user understanding, explores multiple solutions, iterates rapidly, balances competing constraints, follows established principles while innovating appropriately, and validates decisions with users.",
+        "How is it similar to or different than related terms?": "Design is broader than just UI (visual elements) - it includes conceptual and interaction design. It's more creative and generative than analysis. Design thinking is a specific approach to design that emphasizes empathy, ideation, and iteration."
+      }
+    },
+    {
+      "id": 5,
+      "categoryId": 1,
+      "name": "Usability Engineering",
+      "definition": "A systematic, disciplined approach to developing usable systems through user-centered design methods, empirical measurement, and iterative refinement throughout the development process.",
+      "answers": {
+        "What does it mean?": "Usability engineering is the systematic application of engineering principles to achieve usability in products. It involves defined processes, measurable goals, empirical testing, and iterative improvement to ensure systems are usable.",
+        "Why is it important?": "It's important because it provides structure and rigor to UX practice, ensuring usability is achieved through systematic methods rather than intuition alone. It makes UX measurable, trackable, and accountable to stakeholders.",
+        "When and/or where is it used?": "Usability engineering is used throughout product development, particularly in organizations that need structured processes. It's common in enterprise software, safety-critical systems, and large organizations with defined development methodologies.",
+        "What are some examples?": "Examples include: setting quantitative usability targets (e.g., '90% of users complete checkout in under 2 minutes'), conducting structured usability tests, tracking metrics over time, creating usability specifications.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Usability engineering integrates with the software development lifecycle, adding specific UX activities at each phase: user research early, design and prototyping during development, testing before release, and post-launch evaluation.",
+        "What does it look like to do this well?": "Effective usability engineering involves: clear, measurable usability goals; systematic user testing; documented processes; iterative refinement based on data; and integration with engineering workflows and timelines.",
+        "How is it similar to or different than related terms?": "Usability engineering is more structured and measurement-focused than general UX practice. It emphasizes the 'engineering' aspect - processes, metrics, repeatability. It's more formal than design thinking and focuses specifically on usability rather than broader UX."
+      }
+    },
+    {
+      "id": 6,
+      "categoryId": 1,
+      "name": "Usability",
+      "definition": "The extent to which a product can be used by specified users to achieve specified goals with effectiveness, efficiency, and satisfaction in a specified context of use.",
+      "answers": {
+        "What does it mean?": "Usability is the quality of a system that determines how easily and successfully users can accomplish their goals. It encompasses learnability, efficiency, memorability, error prevention/recovery, and satisfaction.",
+        "Why is it important?": "Usability is fundamental because even the most powerful features are useless if users can't figure out how to use them. High usability leads to productivity, user satisfaction, reduced errors, and lower support costs.",
+        "When and/or where is it used?": "Usability is evaluated throughout design and development through various methods like usability testing, heuristic evaluation, and cognitive walkthroughs. It's a concern for any interactive system in any domain.",
+        "What are some examples?": "Examples include: Google's simple search interface (easy to learn and use), keyboard shortcuts in professional software (efficiency for expert users), clear error messages that help recovery, consistent navigation patterns.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Usability is one component of overall UX, alongside usefulness and emotional impact. It's assessed during evaluation phases and drives design refinements throughout the iterative UX process.",
+        "What does it look like to do this well?": "High usability means: new users learn quickly, experienced users work efficiently, users remember how to use it after breaks, errors are rare and easily corrected, and users are satisfied with the interaction.",
+        "How is it similar to or different than related terms?": "Usability is narrower than UX (which includes emotional and value aspects). It's more objective and measurable than 'user-friendliness'. Usability is a necessary but not sufficient condition for good UX - a system can be usable but not useful or delightful."
+      }
+    },
+    {
+      "id": 7,
+      "categoryId": 1,
+      "name": "Usefulness",
+      "definition": "The degree to which a product provides the functionality and capabilities needed to accomplish users' actual goals and tasks effectively.",
+      "answers": {
+        "What does it mean?": "Usefulness refers to whether a system provides the right functionality to help users accomplish their real goals. It's about having features that matter and solve actual problems, not just being easy to use.",
+        "Why is it important?": "Usefulness is critical because even the most usable system fails if it doesn't do what users need. Users won't adopt products that don't solve their problems, regardless of how well-designed the interface is.",
+        "When and/or where is it used?": "Usefulness is determined during requirements analysis and validated through user research and evaluation. It's assessed when deciding what features to build and whether the product meets real user needs.",
+        "What are some examples?": "Examples include: email is useful for communication, GPS navigation is useful for finding directions, spreadsheets are useful for calculations. A beautifully designed app for a problem no one has is not useful.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Usefulness is determined early in the UX process through contextual inquiry and requirements extraction. It drives what features are designed and implemented. Along with usability and emotional impact, it comprises overall UX.",
+        "What does it look like to do this well?": "High usefulness means: the system solves real user problems, provides necessary functionality, supports actual workflows, delivers value that justifies the effort to use it, and meets or exceeds user expectations for capabilities.",
+        "How is it similar to or different than related terms?": "Usefulness is about 'what' capabilities a system has, while usability is about 'how well' those capabilities work. Both are necessary for good UX. A system can be highly usable but not useful (solves wrong problem) or vice versa (right features, bad interface)."
+      }
+    },
+    {
+      "id": 8,
+      "categoryId": 1,
+      "name": "Emotional Impact",
+      "definition": "The affective and emotional response users have when interacting with a product, including feelings of joy, frustration, trust, delight, or anxiety.",
+      "answers": {
+        "What does it mean?": "Emotional impact refers to the feelings and emotional responses evoked by interacting with a product - whether it delights, frustrates, builds trust, creates anxiety, or generates other emotional responses in users.",
+        "Why is it important?": "Emotional impact is important because emotions strongly influence user behavior, adoption, loyalty, and recommendations. Products that create positive emotional connections build stronger user relationships and competitive advantages beyond functionality.",
+        "When and/or where is it used?": "Emotional impact is considered throughout design, particularly in emotional perspective design and aesthetic decisions. It's especially important in consumer products, brands, and experiences where emotional connection differentiates competitors.",
+        "What are some examples?": "Examples include: Apple products creating feelings of premium quality, video games generating excitement, bank apps building trust through professional design, error messages causing frustration, delightful animations creating joy.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Emotional impact is one of three pillars of UX (with usability and usefulness). It's shaped by design decisions in visual design, interaction design, and microcopy. It's assessed through qualitative evaluation methods.",
+        "What does it look like to do this well?": "Positive emotional impact comes from: beautiful aesthetics, delightful micro-interactions, personality in copy, smooth animations, exceeding expectations, showing care for details, creating moments of joy, and building trust through consistency.",
+        "How is it similar to or different than related terms?": "Emotional impact goes beyond usability (which is more functional) and usefulness (which is about capability). It's less measurable than usability but equally important for overall UX. It's what makes products 'lovable' rather than just 'usable'."
+      }
+    },
+    {
+      "id": 9,
+      "categoryId": 1,
+      "name": "Interaction Design",
+      "definition": "The practice of designing interactive digital products, environments, systems, and services, with particular focus on defining the behavior of the system and how users interact with it.",
+      "answers": {
+        "What does it mean?": "Interaction design focuses on defining how users interact with a system - the behaviors, flows, responses, and dynamics of the interaction. It's about designing the dialogue between user and system over time.",
+        "Why is it important?": "Interaction design is crucial because it determines whether users can successfully accomplish their goals through the interface. It bridges user intentions and system capabilities by defining the interactive behaviors.",
+        "When and/or where is it used?": "Interaction design occurs after conceptual design and before detailed visual design. It's practiced by interaction designers working on any interactive system - apps, websites, devices, installations, or services.",
+        "What are some examples?": "Examples include: designing swipe gestures for mobile interfaces, defining the behavior of drag-and-drop, creating the flow of a multi-step form, specifying animations and transitions, designing voice interaction patterns.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Interaction design follows user research and conceptual design, informing UI design and prototyping. It defines the 'how' of user-system interaction, which is then visualized in UI design and tested through prototypes.",
+        "What does it look like to do this well?": "Good interaction design is: responsive and provides immediate feedback, follows user expectations and mental models, is consistent within the system, supports user control, prevents errors, and creates smooth, natural-feeling interactions.",
+        "How is it similar to or different than related terms?": "Interaction design is more behavioral/temporal than UI design (which is visual/spatial). It's more specific than UX (which is holistic) and more detailed than conceptual design (which is high-level). It focuses on the dynamic aspects of the interface."
+      }
+    },
+    {
+      "id": 10,
+      "categoryId": 2,
+      "name": "Locus of Influence in an Organization",
+      "definition": "The point or level within an organization's structure where UX professionals have the most impact and decision-making power, ranging from individual contributor to strategic leadership levels.",
+      "answers": {
+        "What does it mean?": "Locus of influence refers to where in an organizational hierarchy UX practitioners have authority and impact. It can range from tactical (individual projects) to strategic (company-wide vision and culture).",
+        "Why is it important?": "It's important because the locus of influence determines the scope and impact of UX work - whether UX shapes individual features, entire products, or organizational strategy. Higher locus enables greater impact on business outcomes.",
+        "When and/or where is it used?": "This concept applies when considering UX maturity in organizations, planning career growth, or advocating for UX. It helps understand and improve how UX integrates into software development organizations.",
+        "What are some examples?": "Examples include: Junior designer influencing feature design (low locus), senior designer influencing product direction (medium locus), design executive influencing company strategy and culture (high locus).",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Locus of influence affects how UX connects with software engineering - higher locus means UX considerations are integrated earlier and more fundamentally into development processes and business decisions.",
+        "What does it look like to do this well?": "Effective UX influence involves: demonstrating value through metrics, building relationships with stakeholders, communicating in business terms, showing ROI of UX work, and gradually expanding sphere of impact.",
+        "How is it similar to or different than related terms?": "Locus of influence is about organizational power/position, while UX maturity is about organizational capability. Higher locus enables better UX-SE integration but requires organizational buy-in and demonstrated value."
+      }
+    },
+    {
+      "id": 11,
+      "categoryId": 2,
+      "name": "UX-SE Success Components",
+      "definition": "The key factors that enable successful integration of UX and software engineering practices, including communication, shared understanding, aligned processes, and mutual respect between disciplines.",
+      "answers": {
+        "What does it mean?": "UX-SE success components are the critical factors that enable UX and software engineering teams to work together effectively, including communication, timing, shared goals, mutual understanding, and integrated processes.",
+        "Why is it important?": "These components are vital because UX and SE must collaborate closely to deliver successful products. Without these factors, teams work in silos, leading to miscommunication, wasted effort, and poor product outcomes.",
+        "When and/or where is it used?": "These components should be established and maintained throughout product development. They're essential in any organization where UX and engineering teams collaborate, especially in agile and iterative development environments.",
+        "What are some examples?": "Examples include: regular design-dev sync meetings, shared user story definitions, designers participating in sprint planning, developers involved in design reviews, common language and documentation, aligned timelines.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Success components enable the UX lifecycle to integrate with software development cycles. They ensure design work happens ahead of development, feedback loops function, and both disciplines contribute to better products.",
+        "What does it look like to do this well?": "Success looks like: designers and developers communicating regularly, shared understanding of user needs, design staying ahead of development, smooth handoffs, collaborative problem-solving, and mutual respect for each discipline's expertise.",
+        "How is it similar to or different than related terms?": "Success components are the 'how' of integration, while locus of influence is about 'where' in the organization. Components are tactical practices; challenges are obstacles to achieving them."
+      }
+    },
+    {
+      "id": 12,
+      "categoryId": 2,
+      "name": "Challenge of Connecting SE and UX",
+      "definition": "The difficulties in integrating UX practices with software engineering processes, including different timescales, methodologies, vocabularies, priorities, and ways of thinking between the disciplines.",
+      "answers": {
+        "What does it mean?": "The challenges include: different timescales (design needs time ahead of development), different methodologies (design thinking vs. engineering processes), communication gaps, conflicting priorities, and cultural differences between disciplines.",
+        "Why is it important?": "Understanding these challenges is crucial for addressing them. Unresolved tensions lead to rushed design, implementation that doesn't match design intent, frustrated teams, and poor user experiences.",
+        "When and/or where is it used?": "These challenges arise throughout product development, particularly during project planning, sprint planning, design handoffs, and when trying to integrate UX into existing engineering-dominated processes.",
+        "What are some examples?": "Examples include: designers not having enough lead time before development sprints, developers changing designs without UX input, different vocabularies causing miscommunication, pressure to skip user research, tension over technical feasibility.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "These challenges affect the entire UX lifecycle - limiting time for proper research and iteration, forcing compromises in design, and reducing opportunities for evaluation. Addressing them enables better UX-SE integration.",
+        "What does it look like to do this well?": "Successfully addressing challenges involves: building mutual understanding, creating integrated processes with appropriate timing, establishing clear communication channels, respecting both disciplines' needs, and organizational support.",
+        "How is it similar to or different than related terms?": "Challenges are obstacles to overcome, while success components are solutions/practices to implement. Understanding challenges helps identify what success components to establish."
+      }
+    },
+    {
+      "id": 13,
+      "categoryId": 2,
+      "name": "Importance of UX in Software Development",
+      "definition": "The critical role UX plays in software development success, including impact on user adoption, satisfaction, productivity, business outcomes, and competitive differentiation.",
+      "answers": {
+        "What does it mean?": "UX importance in software development refers to the significant impact user experience has on product success - affecting user adoption, satisfaction, retention, productivity, brand perception, and ultimately business outcomes.",
+        "Why is it important?": "UX is critical because software success depends on users actually using it effectively. Poor UX leads to abandoned products, support costs, lost customers, and competitive disadvantage. Good UX drives adoption, loyalty, and business success.",
+        "When and/or where is it used?": "UX should be considered from project inception through post-launch maintenance. It's important in all software contexts - consumer apps, enterprise systems, internal tools, websites, and embedded software.",
+        "What are some examples?": "Examples of UX impact: iPhone's success partly due to superior UX, enterprise software adoption rates tied to usability, e-commerce conversion rates affected by checkout UX, app store ratings reflecting UX quality.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "UX importance justifies investing in the full UX lifecycle - research, design, prototyping, and evaluation. It makes the business case for UX resources, tools, and integration into development processes.",
+        "What does it look like to do this well?": "Demonstrating UX importance effectively involves: showing metrics (increased conversion, reduced support calls), user feedback, competitive analysis, ROI calculations, and connecting UX outcomes to business goals.",
+        "How is it similar to or different than related terms?": "Importance is the 'why' (business case for UX), while challenges describe 'what' makes integration difficult, and success components describe 'how' to achieve integration. Understanding importance helps justify addressing challenges."
+      }
+    },
+    {
+      "id": 14,
+      "categoryId": 3,
+      "name": "UX Lifecycle, the Wheel",
+      "definition": "A cyclical model of the UX process showing the iterative phases of analysis, design, prototyping, and evaluation that repeat throughout product development.",
+      "answers": {
+        "What does it mean?": "The UX Lifecycle (Wheel) is a circular model representing the iterative UX process: Analysis -> Design -> Prototyping -> Evaluation, then back to Analysis. It emphasizes the continuous, cyclical nature of UX work.",
+        "Why is it important?": "The Wheel is important because it shows UX is not linear but iterative. It guides teams through systematic UX activities while emphasizing continuous refinement based on evaluation feedback.",
+        "When and/or where is it used?": "The Wheel is used throughout product development, from initial concept through launch and ongoing improvements. It provides structure for UX activities in any project, helping teams plan and sequence their work.",
+        "What are some examples?": "Example: Start with user research (Analysis), create designs (Design), build prototypes (Prototyping), test with users (Evaluation), refine based on findings (back to Analysis/Design), repeat until launch and beyond.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "The Wheel encompasses the entire UX process. Analysis informs Design, which is realized through Prototyping, validated by Evaluation, leading to insights that drive the next cycle. Each phase connects to and depends on the others.",
+        "What does it look like to do this well?": "Using the Wheel well means: completing each phase appropriately, iterating multiple times, using evaluation to drive improvements, adapting the pace to project needs, and maintaining momentum through the cycle.",
+        "How is it similar to or different than related terms?": "The Wheel shows the overall UX process structure, while specific methodologies (contextual inquiry, heuristic evaluation) are tools used within specific phases. The Wheel is process-level; methods are activity-level."
+      }
+    },
+    {
+      "id": 15,
+      "categoryId": 3,
+      "name": "Iteration",
+      "definition": "The practice of repeatedly cycling through design, prototyping, and evaluation to progressively refine and improve a design based on feedback and learning.",
+      "answers": {
+        "What does it mean?": "Iteration is the practice of repeating the design-prototype-evaluate cycle multiple times, each time refining the design based on what was learned. It's about progressive improvement through repeated cycles.",
+        "Why is it important?": "Iteration is crucial because good designs rarely emerge fully formed. It allows learning from mistakes, incorporating feedback, exploring alternatives, and progressively refining until the design meets user needs effectively.",
+        "When and/or where is it used?": "Iteration happens throughout the UX process, from early conceptual iterations through detailed design refinements. It's used whenever there's uncertainty or room for improvement, which is nearly always in UX work.",
+        "What are some examples?": "Examples: sketching multiple concepts, testing a prototype, refining based on feedback, testing again; creating wireframes, getting feedback, revising, testing; multiple rounds of usability testing with improvements between rounds.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Iteration is the mechanism that drives the UX Wheel. Each cycle through Analysis-Design-Prototyping-Evaluation is an iteration. More iterations generally lead to better designs, though diminishing returns eventually occur.",
+        "What does it look like to do this well?": "Effective iteration involves: testing early and often, being open to change, making informed refinements based on data, knowing when to iterate vs. when to move forward, and balancing iteration with project timelines.",
+        "How is it similar to or different than related terms?": "Iteration is a practice/activity, while the UX Wheel is a process model that incorporates iteration. Evaluation drives iteration by providing feedback. Iteration is how designs progressively improve through the Wheel."
+      }
+    },
+    {
+      "id": 16,
+      "categoryId": 3,
+      "name": "Analysis",
+      "definition": "The phase of the UX process focused on understanding users, their work, their environment, and their needs through research and data interpretation to inform design.",
+      "answers": {
+        "What does it mean?": "Analysis is the UX phase dedicated to understanding the problem space: who users are, what they're trying to accomplish, how they currently work, what problems they face, and what context surrounds their activities.",
+        "Why is it important?": "Analysis is critical because good design must be based on real user needs and context. Without proper analysis, teams risk building solutions for wrong problems or missing critical user needs and constraints.",
+        "When and/or where is it used?": "Analysis occurs early in projects and at the start of each iteration. It includes contextual inquiry, contextual analysis, requirements extraction, and creating design-informing models to guide design work.",
+        "What are some examples?": "Examples: conducting user interviews, observing work practices, analyzing workflows, creating personas, building task models, identifying barriers, extracting requirements from research data.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Analysis is the first phase in the UX Wheel. It precedes Design by providing the understanding and requirements that inform design decisions. Analysis outputs (personas, scenarios, requirements) feed directly into Design.",
+        "What does it look like to do this well?": "Good analysis involves: direct user engagement, systematic data collection, thorough interpretation, creating useful models and artifacts, extracting actionable insights, and communicating findings effectively to inform design.",
+        "How is it similar to or different than related terms?": "Analysis focuses on understanding (what is/what's needed), while Design focuses on creating (what could be). Analysis is research-oriented and convergent; Design is creative and divergent. Analysis informs Design."
+      }
+    },
+    {
+      "id": 17,
+      "categoryId": 3,
+      "name": "Design",
+      "definition": "The phase of the UX process where creative solutions are generated and refined based on understanding from analysis, progressing from conceptual ideas to detailed specifications.",
+      "answers": {
+        "What does it mean?": "In the UX process, Design is the phase where teams create solutions based on Analysis findings. It progresses from ideation and conceptual design through intermediate and detailed design to refined specifications ready for implementation.",
+        "Why is it important?": "The Design phase is essential because it transforms user understanding into concrete solutions. This is where creativity and problem-solving happen, generating ideas that address user needs identified in Analysis.",
+        "When and/or where is it used?": "Design follows Analysis in the UX Wheel and precedes Prototyping. It occurs throughout product development, from initial concepts to detailed specifications, with iterative refinement based on evaluation.",
+        "What are some examples?": "Examples: brainstorming solutions, sketching concepts, creating storyboards, designing interaction flows, developing wireframes, creating visual compositions, specifying detailed interactions and behaviors.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Design sits between Analysis (which provides requirements and understanding) and Prototyping (which realizes designs for testing). Design takes inputs from Analysis and creates outputs that drive Prototyping and eventually implementation.",
+        "What does it look like to do this well?": "Effective Design involves: grounding decisions in Analysis findings, exploring multiple alternatives, progressing from rough to refined, balancing creativity with constraints, and preparing clear specifications for Prototyping/development.",
+        "How is it similar to or different than related terms?": "Design is creative/generative (creating solutions), while Analysis is investigative/interpretive (understanding problems). Prototyping is about realization (making designs tangible). Design is the central creative phase of UX."
+      }
+    },
+    {
+      "id": 18,
+      "categoryId": 3,
+      "name": "Prototyping",
+      "definition": "The phase of creating preliminary versions of the design to explore, communicate, and test ideas before full implementation, varying in fidelity and scope.",
+      "answers": {
+        "What does it mean?": "Prototyping is the UX phase where designs are made tangible through representations ranging from paper sketches to interactive digital mockups. Prototypes make abstract design ideas concrete and testable.",
+        "Why is it important?": "Prototyping is crucial because it enables testing and validation before expensive implementation. It helps identify problems early, communicate designs to stakeholders, and explore alternatives cheaply and quickly.",
+        "When and/or where is it used?": "Prototyping occurs after Design and before Evaluation in the UX Wheel, though it often overlaps with both. It happens throughout development, with increasing fidelity as designs mature and more aspects become validated.",
+        "What are some examples?": "Examples: paper sketches to test concepts, clickable wireframes to test navigation, interactive mockups to test detailed interactions, Wizard of Oz prototypes to test novel concepts, video prototypes to test concepts.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Prototyping follows Design (implementing design decisions) and enables Evaluation (providing something to test). Different prototype types serve different purposes across the design progression from conceptual to detailed.",
+        "What does it look like to do this well?": "Good prototyping involves: choosing appropriate fidelity for the questions being asked, creating prototypes quickly, testing the right aspects, avoiding over-investment before validation, and using prototypes to drive learning.",
+        "How is it similar to or different than related terms?": "Prototyping is about realization/representation (making designs tangible), Design is about creation (generating solutions), and Evaluation is about assessment (validating designs). Prototypes are vehicles for learning through evaluation."
+      }
+    },
+    {
+      "id": 19,
+      "categoryId": 3,
+      "name": "Evaluation",
+      "definition": "The phase of assessing designs through various methods to identify problems, validate decisions, and generate insights that drive improvements in the next iteration.",
+      "answers": {
+        "What does it mean?": "Evaluation is the UX phase where designs are assessed to determine how well they meet user needs and usability standards. It uses various methods to identify issues, validate design decisions, and drive improvements.",
+        "Why is it important?": "Evaluation is essential because it provides objective feedback on design quality, catches problems before launch, validates assumptions, and generates insights that drive iterative improvement. It prevents shipping poor designs.",
+        "When and/or where is it used?": "Evaluation occurs after Prototyping in the UX Wheel and feeds back into Analysis/Design for the next iteration. It happens throughout development, from early conceptual validation to pre-launch usability testing.",
+        "What are some examples?": "Examples: usability testing with real users, heuristic evaluation by experts, cognitive walkthroughs, A/B testing, analytics review, design critiques, accessibility audits.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Evaluation completes the UX Wheel cycle by assessing Prototypes, identifying issues, and generating insights that inform the next iteration's Analysis and Design. It's the critical feedback mechanism that drives improvement.",
+        "What does it look like to do this well?": "Effective evaluation involves: choosing appropriate methods for questions and stage, testing with representative users, systematic analysis, actionable findings, clear communication of results, and driving improvements in next iteration.",
+        "How is it similar to or different than related terms?": "Evaluation is assessment/validation (judging quality), while Design is creation (generating solutions) and Analysis is investigation (understanding problems). Evaluation provides the feedback that enables iteration and improvement."
+      }
+    },
+    {
+      "id": 20,
+      "categoryId": 3,
+      "name": "Tradeoffs",
+      "definition": "The necessary compromises and balanced decisions made when competing constraints, requirements, or design qualities cannot all be maximally satisfied simultaneously.",
+      "answers": {
+        "What does it mean?": "Tradeoffs are the compromises made when you can't optimize everything simultaneously - balancing competing needs like speed vs. accuracy, simplicity vs. power, time vs. quality, or different user groups' needs.",
+        "Why is it important?": "Understanding tradeoffs is critical because design always involves constraints - time, budget, technical limitations, competing user needs. Good designers explicitly consider and make informed tradeoffs rather than ignoring tensions.",
+        "When and/or where is it used?": "Tradeoff decisions occur throughout the UX process, particularly in Design when balancing requirements, and when scope/timeline pressures require prioritization. They're inherent in any real-world project with constraints.",
+        "What are some examples?": "Examples: simplifying UI for novices vs. providing power features for experts, spending time on research vs. design, depth vs. breadth in prototypes, innovation vs. familiarity, accessibility features vs. sleek aesthetics.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Tradeoffs affect all UX phases - how much time for Analysis vs. Design, prototype fidelity vs. speed, evaluation rigor vs. timeline. They're a constant reality that shapes decisions throughout the UX Wheel.",
+        "What does it look like to do this well?": "Managing tradeoffs well involves: making them explicit, understanding implications, using data to inform decisions, considering long-term impact, getting stakeholder input, and documenting rationale for future reference.",
+        "How is it similar to or different than related terms?": "Tradeoffs are necessary compromises in real projects, while ideals are what you'd do with unlimited resources. Constraints create the need for tradeoffs. Different than prioritization, which is choosing what to do; tradeoffs are about balancing competing goods."
+      }
+    },
+    {
+      "id": 21,
+      "categoryId": 4,
+      "name": "Contextual Inquiry",
+      "definition": "A user research method involving going into the user's environment to observe and interview them while they work, gathering rich contextual data about work practices and needs.",
+      "answers": {
+        "What does it mean?": "Contextual inquiry is a field research method where researchers observe and interview users in their actual work environment while they perform real tasks, gathering rich, contextual understanding of work practices.",
+        "Why is it important?": "It's important because it reveals how people actually work (vs. how they say they work), uncovers tacit knowledge, identifies unarticulated needs, and provides authentic context that lab studies miss.",
+        "When and/or where is it used?": "Contextual inquiry is used early in the UX process during the Analysis phase, before design begins. It's appropriate when you need deep understanding of user work, particularly for complex domains or existing workflows.",
+        "What are some examples?": "Examples: observing nurses using hospital systems during shifts, watching developers use code editors in their workspace, observing retail workers using POS systems during customer interactions.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Contextual inquiry is the primary data collection method in the Analysis phase. Its outputs (observations, interviews, artifacts) feed into contextual analysis, which creates models that inform design.",
+        "What does it look like to do this well?": "Good contextual inquiry involves: minimal disruption to natural work, active observation and note-taking, asking clarifying questions, collecting artifacts, focusing on work practice rather than opinions, and capturing rich detail.",
+        "How is it similar to or different than related terms?": "Contextual inquiry differs from lab studies (natural vs. controlled environment), surveys (observation vs. self-report), and interviews alone (watching work vs. talking about work). It's ethnographic and context-rich."
+      }
+    },
+    {
+      "id": 22,
+      "categoryId": 4,
+      "name": "System Concept Statement",
+      "definition": "A brief statement defining the high-level idea of what system or solution will support the work being studied, providing initial focus for inquiry.",
+      "answers": {
+        "What does it mean?": "A system concept statement is a brief, high-level description of the envisioned system or product that will support the work domain being studied. It provides initial direction without constraining the inquiry.",
+        "Why is it important?": "It's important because it focuses the contextual inquiry effort on relevant aspects of work while remaining open to discovery. It helps researchers know what to pay attention to without biasing findings.",
+        "When and/or where is it used?": "The system concept statement is developed before beginning contextual inquiry and refined as understanding grows. It guides what work domains and practices to study.",
+        "What are some examples?": "Examples: 'A mobile app to help field technicians access repair manuals and report issues,' 'A system to support collaborative scientific data analysis,' 'A tool for managing patient care coordination.'",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "The system concept statement initiates the Analysis phase by defining the problem space. It focuses contextual inquiry efforts, though findings may refine or challenge the initial concept.",
+        "What does it look like to do this well?": "A good system concept statement is: brief (1-2 sentences), focused on supporting work (not specific features), open enough to allow discovery, and refined based on early findings if needed.",
+        "How is it similar to or different than related terms?": "Unlike detailed requirements (which are specific), the system concept is high-level and conceptual. Unlike design ideas (which are solutions), it describes the problem space and general intent."
+      }
+    },
+    {
+      "id": 30,
+      "categoryId": 4,
+      "name": "Work Activity Notes",
+      "definition": "Organized, cleaned-up notes from contextual inquiry sessions that structure observations and findings into a usable format for analysis.",
+      "answers": {
+        "What does it mean?": "Work activity notes are cleaned-up, organized versions of raw field notes from contextual inquiry, structured to highlight key observations, quotes, insights, and findings in a usable format.",
+        "Why is it important?": "They're important because raw field notes are often messy and hard for others to use. Work activity notes make findings accessible to the team and provide organized input for further analysis.",
+        "When and/or where is it used?": "Work activity notes are created shortly after contextual inquiry sessions while memories are fresh. They're used as input for creating flow models, affinity diagrams, and requirements extraction.",
+        "What are some examples?": "Examples: organized notes with sections for workflow observed, pain points, quotes, artifacts seen, context description, and researcher interpretations/questions.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Work activity notes are the first step in contextual analysis, transforming raw data into organized form. They feed into all subsequent analysis activities and become reference material throughout the project.",
+        "What does it look like to do this well?": "Good work activity notes are: organized clearly, capture key quotes verbatim, distinguish observation from interpretation, include enough context for others to understand, and are created while memory is fresh.",
+        "How is it similar to or different than related terms?": "Work activity notes are organized interpretations of raw data (which is messy/incomplete), more detailed than flow models (which are visual summaries), and input for creating affinity diagrams (which synthesize across sessions)."
+      }
+    },
+    {
+      "id": 35,
+      "categoryId": 4,
+      "name": "Requirements Extraction",
+      "definition": "The process of deriving specific system requirements from analysis of user work, using deductive reasoning to identify what the system must provide.",
+      "answers": {
+        "What does it mean?": "Requirements extraction is the systematic process of deriving specific requirements from analysis findings - examining observations, barriers, and user needs to determine what capabilities the system must have.",
+        "Why is it important?": "It's important because it ensures requirements are grounded in actual user needs rather than assumptions. It creates the bridge from 'what we learned' (analysis) to 'what we must build' (design).",
+        "When and/or where is it used?": "Requirements extraction occurs during the Analysis phase, after contextual inquiry and analysis have been completed. It uses those findings to derive specific system requirements.",
+        "What are some examples?": "Examples: from observing users switching between apps, extract requirement for integrated interface; from users struggling to find information, extract requirement for robust search functionality.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Requirements extraction takes contextual analysis outputs (barriers, work activity patterns) and transforms them into requirements that drive design decisions and evaluation criteria.",
+        "What does it look like to do this well?": "Effective extraction involves: using deductive reasoning, tracing requirements to specific findings, including rationale, being specific about needs, distinguishing must-haves from nice-to-haves.",
+        "How is it similar to or different than related terms?": "Extraction is the process (how you derive requirements), while requirements are the output (the specifications themselves). Extraction uses deductive reasoning; analysis uses inductive pattern-finding."
+      }
+    },
+    {
+      "id": 39,
+      "categoryId": 4,
+      "name": "Current Situation",
+      "definition": "Design-informing models representing how users currently work, including existing tools, processes, and problems - the 'as-is' state.",
+      "answers": {
+        "What does it mean?": "Current situation models represent how users currently accomplish their work, including existing tools, workflows, problems, and workarounds - providing the 'as-is' baseline for understanding what needs improvement.",
+        "Why is it important?": "Understanding current situation is important because it reveals what works (to preserve), what doesn't (to fix), and contextual constraints (to respect). You can't improve what you don't understand.",
+        "When and/or where is it used?": "Current situation models are created from contextual inquiry data during Analysis. They provide baseline understanding that informs envisioned situation models and design decisions.",
+        "What are some examples?": "Examples: flow models of current communication patterns, task models of current workflows, personas based on current user characteristics, scenarios describing current work practices.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Current situation models form the foundation for design by establishing baseline understanding. They're compared with envisioned situation models to articulate the design vision and intended improvements.",
+        "What does it look like to do this well?": "Good current situation models: accurately represent actual practice (not idealized), include both successful and problematic aspects, capture enough detail to inform design, and note barriers/pain points.",
+        "How is it similar to or different than related terms?": "Current situation shows 'as-is' (what exists now), while envisioned situation shows 'to-be' (what designs will enable). Current is descriptive; envisioned is prescriptive. Comparing them reveals design impact."
+      }
+    },
+    {
+      "id": 42,
+      "categoryId": 4,
+      "name": "Work Roles",
+      "definition": "Distinct functional positions or jobs users occupy, each with specific responsibilities, goals, and work patterns relevant to system design.",
+      "answers": {
+        "What does it mean?": "Work roles are distinct job functions or positions users occupy (nurse, doctor, administrator), each with specific responsibilities, authority, goals, and work patterns that affect system needs.",
+        "Why is it important?": "Work roles matter because different roles have different needs, permissions, workflows, and goals. Systems must support the distinct requirements of each role appropriately.",
+        "When and/or where is it used?": "Work roles are identified during contextual inquiry, documented as part of user models, and used to guide design decisions about functionality, permissions, interfaces, and workflows for different role types.",
+        "What are some examples?": "Examples: in healthcare - doctors, nurses, administrators, technicians; in development - developers, testers, project managers, designers; each role has distinct system needs and usage patterns.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Work roles inform user class definitions and persona creation. They help structure functionality around role-based needs and appear in usage scenarios showing role-specific workflows.",
+        "What does it look like to do this well?": "Good work role analysis: identifies all relevant roles, understands each role's goals and responsibilities, recognizes role interactions, and informs role-appropriate design decisions.",
+        "How is it similar to or different than related terms?": "Work roles are job-based categories (organizational), user classes can cross roles (skill-based), and personas are specific examples (individual). Roles are formal positions; personas are representative individuals."
+      }
+    },
+    {
+      "id": 47,
+      "categoryId": 4,
+      "name": "Flow Model (in Usage Models context)",
+      "definition": "A usage model showing how information, communication, and artifacts flow through a work process - same concept as in contextual analysis, used here as a design-informing model.",
+      "answers": {
+        "What does it mean?": "As a usage model, flow models show how information, communication, and artifacts flow through work processes - visualizing coordination and information exchange that systems must support.",
+        "Why is it important?": "Flow models are important usage models because they reveal communication requirements, information dependencies, coordination needs, and collaboration patterns that designs must facilitate.",
+        "When and/or where is it used?": "Flow models are created during contextual analysis and refined as DIMs. They're used during design to ensure systems support necessary information flows and communication.",
+        "What are some examples?": "Examples: showing how patient information flows from admission through discharge, how customer requests flow through support organization, how code changes flow through review and deployment.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Flow models in usage models context show workflow information flows, complementing hierarchical task inventories (task structure), scenarios (narrative task descriptions), and interaction models (detailed steps).",
+        "What does it look like to do this well?": "Effective flow models as usage models: show key information exchanges, highlight bottlenecks or breakdowns, indicate communication needs, and inform design of collaborative features.",
+        "How is it similar to or different than related terms?": "Flow models show inter-personal flows (between people/systems), while hierarchical task inventories show task decomposition (within work), and interaction models show user-system interaction (detailed steps)."
+      }
+    },
+    {
+      "id": 52,
+      "categoryId": 4,
+      "name": "Artifact Model",
+      "definition": "Representation of objects and artifacts users interact with during work - forms, documents, tools, devices - showing their role in work processes.",
+      "answers": {
+        "What does it mean?": "Artifact models document the physical and digital artifacts users interact with - forms, documents, devices, tools - showing how they're used in work and what information they contain.",
+        "Why is it important?": "Artifact models are important because artifacts reveal information needs, show current tools/processes that may need replacing or integrating, and demonstrate what formats/structures users are familiar with.",
+        "When and/or where is it used?": "Artifact models are created from artifacts collected during contextual inquiry, analyzed to understand their role, then used to inform information design and integration requirements.",
+        "What are some examples?": "Examples: models of paper forms showing fields users complete, documents showing information structures, tools and devices users interact with, templates or checklists users reference.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Artifact models inform information architecture (what information users work with), integration requirements (what tools must connect), and interaction design (familiar structures to build on).",
+        "What does it look like to do this well?": "Effective artifact models: document relevant artifacts comprehensively, show artifact purpose and use in work, identify information they contain, note user modifications or annotations.",
+        "How is it similar to or different than related terms?": "Artifact models document objects (things), physical models document space (environment), usage models document activities (actions). Artifacts are tools/documents; physical models are spaces/layouts."
+      }
+    },
+    {
+      "id": 23,
+      "categoryId": 4,
+      "name": "Ethnography",
+      "definition": "The study of people and cultures through immersion in their environment, adapted in HCI to understand users' work practices, social context, and culture.",
+      "answers": {
+        "What does it mean?": "Ethnography is a research approach from anthropology involving immersing yourself in users' environments to understand their culture, practices, and context through observation and participation over extended periods.",
+        "Why is it important?": "It's important in HCI because it reveals deep cultural and social factors affecting technology use, uncovers implicit norms and practices, and provides holistic understanding that survey/lab methods miss.",
+        "When and/or where is it used?": "Ethnographic approaches are used when deep cultural understanding is needed, particularly for complex social/organizational contexts, unfamiliar domains, or when designing systems that affect work culture.",
+        "What are some examples?": "Examples: spending weeks in a hospital to understand clinical culture before designing medical software, embedding with a sales team to understand their communication patterns, observing classroom culture for educational technology.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Ethnography is a foundational approach for contextual inquiry. It emphasizes cultural and social aspects of work, providing depth that informs all subsequent analysis and design work.",
+        "What does it look like to do this well?": "Good ethnography involves: extended time in the field, building rapport with participants, observing without judging, noting cultural norms, understanding social relationships, and being open to unexpected findings.",
+        "How is it similar to or different than related terms?": "Ethnography is longer-term and more immersive than standard contextual inquiry, more focused on culture than task analysis, and more interpretive than quantitative research methods."
+      }
+    },
+    {
+      "id": 29,
+      "categoryId": 4,
+      "name": "Contextual Analysis",
+      "definition": "The process of organizing, interpreting, and synthesizing work activity data to create structured representations and extract insights about user work.",
+      "answers": {
+        "What does it mean?": "Contextual analysis is the systematic process of organizing and making sense of work activity data by creating structured representations like work activity notes, flow models, and work activity affinity diagrams.",
+        "Why is it important?": "It's important because raw data alone doesn't drive design - it must be organized, interpreted, and synthesized to reveal patterns, identify barriers, and extract actionable insights about user needs.",
+        "When and/or where is it used?": "Contextual analysis follows contextual inquiry in the Analysis phase. It transforms raw observations and interviews into organized, interpretable representations that inform requirements and design.",
+        "What are some examples?": "Examples: organizing field notes into work activity notes, drawing flow models from observed workflows, building affinity diagrams to find themes, identifying common barriers users face.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Contextual analysis sits between data collection (contextual inquiry) and design. It processes raw work activity data into models and insights that inform requirements extraction and design-informing models.",
+        "What does it look like to do this well?": "Effective contextual analysis involves: systematic organization of data, collaborative interpretation, creation of visual models, identification of patterns across users, and extraction of actionable design insights.",
+        "How is it similar to or different than related terms?": "Contextual inquiry is data collection (gathering), while contextual analysis is data interpretation (making sense). Inquiry is field research; analysis is synthesis work typically done after returning from the field."
+      }
+    },
+    {
+      "id": 31,
+      "categoryId": 4,
+      "name": "Flow Model",
+      "definition": "A diagram showing the flow of information, artifacts, and communication between people, systems, and groups in a work process.",
+      "answers": {
+        "What does it mean?": "A flow model is a visual diagram showing how information, artifacts, and communication flow between people, roles, and systems during work processes. It shows who talks to whom, what information is shared, and what artifacts move between actors.",
+        "Why is it important?": "Flow models are important because they reveal communication patterns, information bottlenecks, coordination requirements, and collaboration structures that systems must support or improve.",
+        "When and/or where is it used?": "Flow models are created during contextual analysis based on observations from contextual inquiry. They're also used as design-informing models and can show both current and envisioned situations.",
+        "What are some examples?": "Examples: diagram showing doctor->nurse->pharmacy medication order flow, showing sales->engineering->customer communication patterns, showing how bug reports flow through a development team.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Flow models are created during contextual analysis and also appear in design-informing models as usage models. They help identify communication needs that designs must address.",
+        "What does it look like to do this well?": "Good flow models: clearly show actors/roles, indicate information/artifact flows with labeled arrows, note breakdowns or bottlenecks, distinguish different types of communication, and focus on relevant work aspects.",
+        "How is it similar to or different than related terms?": "Flow models show information/communication flows (between entities), while hierarchical task inventories show task decomposition (within work). Flow models are social/collaborative; task models are individual work-focused."
+      }
+    },
+    {
+      "id": 36,
+      "categoryId": 4,
+      "name": "Deductive Reasoning",
+      "definition": "Logical reasoning from general observations to specific conclusions, used in requirements extraction to derive specific requirements from general findings.",
+      "answers": {
+        "What does it mean?": "Deductive reasoning in UX involves starting with general observations or findings and logically deriving specific requirements or design implications. It's reasoning from general to specific.",
+        "Why is it important?": "It's important because it creates logical connections between what was observed and what's needed, ensuring requirements are justified by evidence rather than hunches.",
+        "When and/or where is it used?": "Deductive reasoning is used during requirements extraction and when making design decisions based on research findings. It helps justify design choices with logical arguments from evidence.",
+        "What are some examples?": "Examples: 'Users frequently switch between email and calendar (observation) → System must integrate email and calendar (requirement).' 'Users forget passwords (observation) → Must provide password reset (requirement).'",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Deductive reasoning connects analysis findings to requirements and design decisions, providing logical justification throughout the UX process.",
+        "What does it look like to do this well?": "Good deductive reasoning: makes logical connections explicit, checks that conclusions follow from premises, considers alternative interpretations, and documents the reasoning chain.",
+        "How is it similar to or different than related terms?": "Deductive reasoning goes from general to specific (findings → requirements), while inductive reasoning (used in analysis) goes from specific to general (observations → patterns). Both are used in UX."
+      }
+    },
+    {
+      "id": 40,
+      "categoryId": 4,
+      "name": "Envisioned Situation",
+      "definition": "Design-informing models representing how users will work with the new system, showing the improved 'to-be' state that design aims to achieve.",
+      "answers": {
+        "What does it mean?": "Envisioned situation models represent how work will be performed with the new system - the 'to-be' state showing improved workflows, solved problems, and new capabilities that design will enable.",
+        "Why is it important?": "Envisioned situation models are important because they articulate the design vision, guide design decisions toward intended improvements, and help stakeholders understand planned changes and benefits.",
+        "When and/or where is it used?": "Envisioned situation models are created during design thinking and early design phases, building on current situation understanding. They guide detailed design and help evaluate whether designs achieve the vision.",
+        "What are some examples?": "Examples: scenarios showing improved workflows with new system, flow models showing streamlined communication, task models showing simplified processes, personas in contexts using new capabilities.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Envisioned models bridge analysis and design - informed by current situation understanding, they articulate the design vision that guides detailed design work and provides criteria for evaluation.",
+        "What does it look like to do this well?": "Effective envisioned models: show realistic improvements (not fantasy), clearly differ from current situation, demonstrate value to users, are specific enough to guide design, and address identified barriers.",
+        "How is it similar to or different than related terms?": "Envisioned situation is the vision (what should be), current situation is the baseline (what is), and design is the solution (how to get there). Envisioned guides design goals; design realizes the envisioned state."
+      }
+    },
+    {
+      "id": 43,
+      "categoryId": 4,
+      "name": "User Classes",
+      "definition": "Groups of users with similar characteristics, needs, or usage patterns, often based on expertise level, frequency of use, or goals.",
+      "answers": {
+        "What does it mean?": "User classes are groups of users sharing similar characteristics, needs, or usage patterns - often categorized by expertise (novice/expert), usage frequency (occasional/frequent), or domain knowledge.",
+        "Why is it important?": "User classes are important because different classes have different needs - novices need learnability, experts need efficiency, occasional users need memorability. Designs must serve appropriate classes.",
+        "When and/or where is it used?": "User classes are identified during Analysis based on observed variations in user characteristics, then used in Design to make appropriate tradeoffs (e.g., prioritizing novice vs. expert needs).",
+        "What are some examples?": "Examples: novice vs. expert users, occasional vs. frequent users, technical vs. non-technical users, power users vs. casual users - each class has distinct design implications.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "User classes inform persona creation (personas often represent specific classes), guide design tradeoffs (which class to optimize for), and appear in scenarios showing class-appropriate usage.",
+        "What does it look like to do this well?": "Effective user class definition: based on meaningful distinctions, captures variations that matter for design, helps prioritize features appropriately, and guides interaction design choices.",
+        "How is it similar to or different than related terms?": "User classes are analytical categories (groupings by similarity), personas are synthetic individuals (specific examples), work roles are job-based (organizational). Classes segment users; personas exemplify them."
+      }
+    },
+    {
+      "id": 48,
+      "categoryId": 4,
+      "name": "Hierarchical Task Inventory",
+      "definition": "A structured breakdown of work tasks into hierarchical levels, showing main tasks decomposed into subtasks and steps, revealing task structure.",
+      "answers": {
+        "What does it mean?": "A hierarchical task inventory breaks work down into hierarchical levels: high-level goals decompose into tasks, tasks into subtasks, subtasks into steps - creating a structured view of work organization.",
+        "Why is it important?": "It's important because it reveals task structure, dependencies, and organization - helping designers understand work complexity and ensure systems support complete task sequences.",
+        "When and/or where is it used?": "Task inventories are created during Analysis by decomposing observed work, then used in Design to organize functionality and ensure all necessary task steps are supported.",
+        "What are some examples?": "Examples: 'Process patient' breaks into 'check-in,' 'examination,' 'treatment,' 'checkout'; 'check-in' breaks into 'verify identity,' 'update information,' 'assign room,' etc.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Task inventories complement scenarios (which tell stories) by providing structured task decomposition. They inform navigation design, feature organization, and workflow support.",
+        "What does it look like to do this well?": "Good task inventories: capture complete task sequences, show appropriate level of detail, reveal task organization and dependencies, and help designers understand task complexity.",
+        "How is it similar to or different than related terms?": "Task inventories show task structure/decomposition (hierarchical), scenarios show task narratives (stories), interaction models show detailed steps (procedural). Inventories are structural; scenarios are narrative."
+      }
+    },
+    {
+      "id": 53,
+      "categoryId": 4,
+      "name": "Physical Model",
+      "definition": "Representation of the physical work environment - workspace layout, equipment, environmental conditions - showing how physical context affects work.",
+      "answers": {
+        "What does it mean?": "Physical models document the physical work environment: workspace layouts, equipment placement, mobility constraints, environmental conditions (lighting, noise), and how physical context affects work.",
+        "Why is it important?": "Physical models matter because physical context creates constraints and opportunities - mobile vs. stationary work, noisy environments, lighting conditions, and space limitations all affect design requirements.",
+        "When and/or where is it used?": "Physical models are created from contextual inquiry observations of work environments, then used to inform design decisions about form factors, modalities, and physical constraints.",
+        "What are some examples?": "Examples: models showing mobile work requiring portable devices, cramped spaces requiring compact interfaces, loud environments requiring visual feedback, outdoor work requiring bright displays.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Physical models inform design decisions about device form factors, interaction modalities (touch, voice, etc.), environmental adaptations (brightness, volume), and physical ergonomics.",
+        "What does it look like to do this well?": "Effective physical models: capture relevant environmental factors, identify constraints that designs must accommodate, note mobility and positioning requirements, consider environmental conditions.",
+        "How is it similar to or different than related terms?": "Physical models describe space/environment (where), artifact models describe objects (what with), usage models describe activities (what doing). Physical is environmental context; artifacts are work tools."
+      }
+    },
+    {
+      "id": 24,
+      "categoryId": 4,
+      "name": "Work, Work Practice, Work Domain",
+      "definition": "Key concepts in contextual inquiry: work (user activities/tasks), work practice (how work is actually done), and work domain (the field/area where work occurs).",
+      "answers": {
+        "What does it mean?": "Work is what users do (tasks/activities), work practice is how they do it (methods, tools, collaboration, workarounds), and work domain is the field/context where it happens (nursing, software development, retail, etc.).",
+        "Why is it important?": "These concepts are important because they structure thinking about users: what they're trying to accomplish (work), how they currently accomplish it (practice), and where/why (domain). Understanding all three is essential for good design.",
+        "When and/or where is it used?": "These concepts frame contextual inquiry and analysis. Researchers study the work domain, observe work practices, and decompose work into understandable units for analysis and design.",
+        "What are some examples?": "Examples: Domain=healthcare, Work=reviewing patient records and prescribing medication, Practice=using EMR system, checking with nurses, writing notes. Domain=software dev, Work=debugging, Practice=using debuggers/logs/print statements.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Understanding work domain provides context, identifying specific work defines scope and goals, and studying work practice reveals how current tools/processes support or hinder work - all informing design.",
+        "What does it look like to do this well?": "Good analysis distinguishes: the work itself (goals/outcomes), how it's currently done (practice - which may be inefficient), and domain constraints/culture. This helps identify improvement opportunities vs. necessary domain characteristics.",
+        "How is it similar to or different than related terms?": "Work is what needs accomplishing (goals), work practice is current methods (which designs might change), work domain is the context (which designs must fit). Work is stable, practice varies, domain provides constraints."
+      }
+    },
+    {
+      "id": 32,
+      "categoryId": 4,
+      "name": "Work Activity Affinity Diagram (WAAD)",
+      "definition": "A hierarchical organization of observations from multiple contextual inquiry sessions, grouping related findings to reveal patterns and themes across users.",
+      "answers": {
+        "What does it mean?": "A WAAD is created by writing individual observations on notes, then collaboratively grouping related notes into clusters, creating hierarchical categories that reveal themes and patterns across multiple contextual inquiry sessions.",
+        "Why is it important?": "WAADs are important because they synthesize findings across users, revealing common patterns and needs rather than individual quirks. They help teams build shared understanding and identify design priorities.",
+        "When and/or where is it used?": "WAADs are created during contextual analysis after collecting data from multiple users. The team collaboratively builds them, then uses resulting themes to inform requirements and design.",
+        "What are some examples?": "Examples: grouping notes about workflow problems, clustering observations about information needs, organizing findings about collaboration patterns, identifying common barriers users face.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "WAADs synthesize work activity notes from multiple contextual inquiry sessions, revealing patterns that inform requirements extraction and design-informing models. They help teams see the forest, not just trees.",
+        "What does it look like to do this well?": "Effective WAAD creation involves: individual notes capturing single observations, bottom-up grouping, team collaboration to build shared understanding, hierarchical organization revealing themes, and labeling that captures meaning.",
+        "How is it similar to or different than related terms?": "WAADs synthesize across sessions (finding patterns), while work activity notes document individual sessions. WAADs are hierarchical and thematic; flow models are structural diagrams. WAADs reveal what; flow models show how."
+      }
+    },
+    {
+      "id": 34,
+      "categoryId": 4,
+      "name": "Requirements",
+      "definition": "Specifications of what the system must do or provide to meet user needs and support their work effectively, derived from analysis of user work.",
+      "answers": {
+        "What does it mean?": "Requirements are specific statements about what a system must do or provide to meet user needs. They specify capabilities, functions, qualities, and constraints that designs must satisfy.",
+        "Why is it important?": "Requirements are critical because they bridge analysis and design - translating user needs into actionable specifications that guide what to build. They ensure designs address real user needs.",
+        "When and/or where is it used?": "Requirements are extracted during the Analysis phase after contextual inquiry and analysis. They guide Design activities and provide criteria for Evaluation.",
+        "What are some examples?": "Examples: 'System must support collaborative editing,' 'Users must be able to filter results by date,' 'Response time must be under 2 seconds,' 'Must work offline with sync capability.'",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Requirements are extracted from analysis findings (observations, barriers, user needs). They guide design by specifying what must be included, and drive evaluation by providing success criteria.",
+        "What does it look like to do this well?": "Good requirements are: specific and clear, derived from real user needs (with rationale), testable/verifiable, prioritized by importance, and focused on what (not how - that's design).",
+        "How is it similar to or different than related terms?": "Requirements specify what systems must do (functional) or what qualities they must have (non-functional). Unlike design decisions (which specify how), requirements specify the must-haves that designs must satisfy."
+      }
+    },
+    {
+      "id": 37,
+      "categoryId": 4,
+      "name": "Rationale",
+      "definition": "The justification or reasoning explaining why a requirement or design decision is necessary, linking it back to user needs and research findings.",
+      "answers": {
+        "What does it mean?": "Rationale is the explanation of why a requirement or design decision is necessary - the user needs, observations, or business reasons that justify it. It connects decisions to their evidence base.",
+        "Why is it important?": "Rationale is critical because it: enables evaluation of requirements, helps prioritization, prevents arbitrary changes, educates stakeholders, and preserves understanding when team members change.",
+        "When and/or where is it used?": "Rationale should be documented with every requirement and major design decision. It's referenced during design reviews, when prioritizing, and when stakeholders question decisions.",
+        "What are some examples?": "Examples: 'Requirement: Offline mode. Rationale: Field technicians often work in areas without connectivity (observed in sessions 3, 5, 7).' 'Design: Large buttons. Rationale: Primary users wear gloves (contextual inquiry finding).'",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Rationale connects analysis findings to requirements and design decisions, creating traceability throughout the UX process. It justifies decisions and enables informed tradeoffs.",
+        "What does it look like to do this well?": "Good rationale is: specific and detailed, references evidence (user quotes, observation notes), explains the user need or problem, and is documented clearly for future reference.",
+        "How is it similar to or different than related terms?": "Rationale explains 'why' (justification), while requirements state 'what' (specifications) and designs show 'how' (solutions). Rationale is the reasoning that connects research to decisions."
+      }
+    },
+    {
+      "id": 41,
+      "categoryId": 4,
+      "name": "User Models",
+      "definition": "Design-informing models that characterize the users - their roles, characteristics, goals, and behaviors - including work roles, user classes, and personas.",
+      "answers": {
+        "What does it mean?": "User models are DIMs that characterize who the users are - their roles, responsibilities, characteristics, goals, skills, and needs. They include work roles, user classes, social models, and personas.",
+        "Why is it important?": "User models are critical because understanding users is fundamental to user-centered design. They help designers empathize with users, make decisions from user perspective, and ensure designs fit user characteristics.",
+        "When and/or where is it used?": "User models are created during Analysis from contextual inquiry data, refined during design, and referenced throughout design and evaluation to keep focus on user needs and characteristics.",
+        "What are some examples?": "Examples: personas describing primary user types, work role descriptions, user classes segmented by expertise level, social models showing team structures and relationships.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "User models are one category of DIMs (alongside usage and environment models). They answer 'who are we designing for?' while usage models answer 'what do they do?' and environment models answer 'where do they work?'",
+        "What does it look like to do this well?": "Effective user models: based on real user research, capture relevant characteristics, help designers empathize, are specific enough to guide decisions, and are actually used during design work.",
+        "How is it similar to or different than related terms?": "User models describe people (who), usage models describe activities (what/how), environment models describe context (where/with what). User models are about user characteristics; usage models are about user behaviors."
+      }
+    },
+    {
+      "id": 44,
+      "categoryId": 4,
+      "name": "Social Models",
+      "definition": "Representations of social structures, relationships, communication patterns, and collaborative work among users and groups.",
+      "answers": {
+        "What does it mean?": "Social models represent the social aspects of work: organizational structures, team relationships, communication patterns, collaboration practices, and social dynamics that affect system use.",
+        "Why is it important?": "Social models are important because work is inherently social. Systems must support communication, collaboration, coordination, and social practices. Ignoring social aspects leads to adoption failures.",
+        "When and/or where is it used?": "Social models are created from contextual inquiry observations of collaboration and communication, then used to design features supporting teamwork, sharing, and coordination.",
+        "What are some examples?": "Examples: organizational charts showing reporting structures, communication networks showing who talks to whom, collaboration patterns showing shared work practices, team models showing interdependencies.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Social models complement individual user models by showing how users work together. They inform design of collaborative features, communication tools, and shared workflows.",
+        "What does it look like to do this well?": "Good social models: capture actual (not formal) communication patterns, show collaboration needs, identify coordination points, reveal social practices that systems must support or change.",
+        "How is it similar to or different than related terms?": "Social models focus on groups and relationships (collective), while personas focus on individuals (singular), and flow models show information exchange (flows). Social models emphasize human relationships."
+      }
+    },
+    {
+      "id": 49,
+      "categoryId": 4,
+      "name": "Usage Scenarios",
+      "definition": "Narrative descriptions of how users accomplish tasks or goals, providing context-rich stories about work that bring user models and usage patterns to life.",
+      "answers": {
+        "What does it mean?": "Usage scenarios are narrative descriptions of users accomplishing work - stories about specific users (often personas) achieving goals in context, including actions, decisions, and outcomes.",
+        "Why is it important?": "Scenarios are crucial because they provide context-rich, relatable descriptions of work that help designers understand and empathize with user situations and make user-centered decisions.",
+        "When and/or where is it used?": "Scenarios are created during Analysis (current situation) and Design (envisioned situation), used throughout design to maintain user focus, and referenced in evaluation.",
+        "What are some examples?": "Examples: 'Sarah arrives for her shift, checks patient assignments, reviews the first patient's chart, notices a medication conflict, contacts the doctor...' - a story showing workflow in context.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Scenarios complement task inventories (adding narrative context to task structures), feature personas (showing personas in action), and drive interaction models (detailed realizations of scenarios).",
+        "What does it look like to do this well?": "Effective scenarios: based on research, include relevant context, show realistic work, feature personas, are specific enough to inform design, and tell engaging stories that help empathy.",
+        "How is it similar to or different than related terms?": "Scenarios are narratives (stories), task inventories are structures (hierarchies), interaction models are procedures (step-by-step). Scenarios provide context; task inventories provide organization; interaction models provide detail."
+      }
+    },
+    {
+      "id": 25,
+      "categoryId": 4,
+      "name": "Interviews",
+      "definition": "Structured or semi-structured conversations with users to understand their work, needs, preferences, and experiences, often conducted during contextual inquiry.",
+      "answers": {
+        "What does it mean?": "Interviews are structured conversations where researchers ask users about their work, needs, experiences, and opinions. In contextual inquiry, they're often semi-structured and conducted while observing work.",
+        "Why is it important?": "Interviews are important because they reveal user perspectives, motivations, preferences, and explanations for observed behaviors. They provide the 'why' behind the 'what' observed in field studies.",
+        "When and/or where is it used?": "Interviews are used during contextual inquiry (alongside observation), during requirements gathering, and sometimes during evaluation. They're appropriate when you need to understand user perspectives, not just observe behaviors.",
+        "What are some examples?": "Examples: asking nurses why they use a particular workaround, having developers explain their debugging process, asking users to walk through their decision-making, conducting post-task interviews about experience.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "In contextual inquiry, interviews complement observation - you watch users work, then ask questions to understand their thinking. Interview data combines with observations and artifacts in contextual analysis.",
+        "What does it look like to do this well?": "Good interviewing involves: open-ended questions, active listening, avoiding leading questions, asking for specific examples, following interesting threads, being comfortable with silence, and focusing on actual behaviors not hypotheticals.",
+        "How is it similar to or different than related terms?": "Interviews gather self-reported data (what people say), while observation captures actual behavior (what people do). Contextual inquiry combines both, since they often differ. Interviews alone miss tacit knowledge and actual practice."
+      }
+    },
+    {
+      "id": 33,
+      "categoryId": 4,
+      "name": "Barriers",
+      "definition": "Obstacles, problems, or difficulties users encounter in their work that impede efficiency, effectiveness, or satisfaction - key targets for design solutions.",
+      "answers": {
+        "What does it mean?": "Barriers are obstacles users face during their work - inefficient processes, confusing interfaces, missing information, communication gaps, system limitations, or any factors that impede work accomplishment.",
+        "Why is it important?": "Identifying barriers is crucial because they represent opportunities for improvement. Designs that remove or reduce barriers directly improve user experience and work effectiveness.",
+        "When and/or where is it used?": "Barriers are identified during contextual inquiry (observation), highlighted in contextual analysis, and become primary drivers for requirements and design solutions.",
+        "What are some examples?": "Examples: waiting for system responses, hunting for needed information, switching between multiple applications, manual data re-entry, unclear error messages, inadequate access to expert knowledge.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Barriers identified in Analysis directly inform Design by highlighting what problems must be solved. They appear in requirements and drive design decisions about what functionality and interaction patterns to include.",
+        "What does it look like to do this well?": "Good barrier analysis involves: documenting specific instances, understanding root causes not just symptoms, assessing impact and frequency, and identifying which barriers designs can realistically address.",
+        "How is it similar to or different than related terms?": "Barriers are problems (what's wrong), while requirements specify solutions (what's needed). Identifying barriers is descriptive (current state); requirements are prescriptive (desired state). Barriers drive requirement creation."
+      }
+    },
+    {
+      "id": 38,
+      "categoryId": 4,
+      "name": "Design-Informing Models (DIMs)",
+      "definition": "Structured representations of users, their work, and context that guide and inform design decisions, including user models, usage models, and work environment models.",
+      "answers": {
+        "What does it mean?": "DIMs are structured representations created during analysis that capture understanding of users, their work, and context in forms specifically intended to guide design decisions. They include user models, usage models, and work environment models.",
+        "Why is it important?": "DIMs are crucial because they translate research findings into actionable design guidance. They help designers empathize with users, understand work context, and make informed decisions throughout design.",
+        "When and/or where is it used?": "DIMs are created during the Analysis phase after contextual inquiry/analysis, then used throughout Design to guide decisions. They remain reference materials throughout the project.",
+        "What are some examples?": "Examples: personas describing user types, scenarios showing how work flows, hierarchical task inventories breaking down work structure, artifact models showing tools used, flow models showing communication.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "DIMs conclude the Analysis phase by organizing findings into design-useful forms. They feed directly into Design activities, helping designers understand who they're designing for and what contexts they must support.",
+        "What does it look like to do this well?": "Effective DIMs are: based on real research data, organized for design use, detailed enough to inform decisions, communicated clearly to designers, and actually referenced during design work.",
+        "How is it similar to or different than related terms?": "DIMs are structured for design use (not just documentation), more actionable than raw analysis findings, and include multiple model types (user/usage/environment) providing complementary perspectives on the design space."
+      }
+    },
+    {
+      "id": 45,
+      "categoryId": 4,
+      "name": "User Personas",
+      "definition": "Rich, realistic descriptions of archetypal users, bringing research findings to life through specific, relatable characters representing user classes.",
+      "answers": {
+        "What does it mean?": "Personas are detailed, realistic descriptions of specific archetypal users, including their background, goals, frustrations, behaviors, and characteristics. They make research findings tangible and relatable.",
+        "Why is it important?": "Personas are crucial because they help teams empathize with users, make user-centered decisions, resolve design disagreements by reference to user needs, and communicate user understanding across teams.",
+        "When and/or where is it used?": "Personas are created during Analysis based on research, refined during design thinking, and referenced throughout design and evaluation to maintain user focus.",
+        "What are some examples?": "Examples: 'Sarah, the busy emergency room nurse who needs quick access to patient data between interruptions,' 'Alex, the new developer who's unfamiliar with the codebase and needs clear documentation.'",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Personas are central user models that appear in usage scenarios, inform design decisions, and provide the 'who' for design thinking. They're derived from user research and represent distinct user classes.",
+        "What does it look like to do this well?": "Effective personas are: based on real research (not stereotypes), rich and sticky (memorable), include relevant details, represent distinct user classes, and are actually used in design decisions.",
+        "How is it similar to or different than related terms?": "Personas are specific examples (individuals), user classes are general categories (groups), work roles are job-based (positions). Personas bring user classes to life; they're design tools, not documentation."
+      }
+    },
+    {
+      "id": 46,
+      "categoryId": 4,
+      "name": "Usage Models",
+      "definition": "Design-informing models that characterize user activities, tasks, and workflows, including flow models, task inventories, scenarios, and interaction models.",
+      "answers": {
+        "What does it mean?": "Usage models are DIMs that characterize what users do - their tasks, workflows, activities, and interactions. They include flow models, hierarchical task inventories, usage scenarios, and task interaction models.",
+        "Why is it important?": "Usage models are essential because understanding what users do and how they do it is fundamental to designing supportive systems. They reveal workflow requirements and interaction needs.",
+        "When and/or where is it used?": "Usage models are created during Analysis from work observations, then used throughout Design to ensure systems support actual work tasks and workflows appropriately.",
+        "What are some examples?": "Examples: scenarios describing task completion, hierarchical task inventories showing task structure, flow models showing information exchange, step-by-step task interaction models showing detailed interactions.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Usage models are one category of DIMs (alongside user and environment models). They answer 'what do users do?' while user models answer 'who are they?' and environment models answer 'where/with what?'",
+        "What does it look like to do this well?": "Effective usage models: based on observed actual work, capture relevant task details, show both successful and problematic workflows, and provide actionable guidance for supporting work.",
+        "How is it similar to or different than related terms?": "Usage models describe activities/behaviors (what users do), user models describe characteristics (who users are), environment models describe context (where/with what). Usage focuses on action."
+      }
+    },
+    {
+      "id": 50,
+      "categoryId": 4,
+      "name": "Step-by-Step Task Interaction Model",
+      "definition": "Detailed sequential description of user actions and system responses for specific tasks, showing the fine-grained interaction choreography.",
+      "answers": {
+        "What does it mean?": "Step-by-step task interaction models detail the specific sequence of user actions and system responses for tasks - like interaction scripts showing exactly what users do and what systems do in response.",
+        "Why is it important?": "They're important because they specify detailed interaction design - the precise choreography of user-system dialogue that makes or breaks usability.",
+        "When and/or where is it used?": "Interaction models are created during detailed design, implementing conceptual designs with specific interaction sequences. They guide prototyping and implementation of interaction behaviors.",
+        "What are some examples?": "Examples: 'User clicks Search button → System displays search field with focus → User types query → System shows live results → User selects result → System navigates to detail view.'",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Interaction models provide detailed specifications implementing scenarios (high-level narratives) and task inventories (task structures). They bridge design and implementation.",
+        "What does it look like to do this well?": "Effective interaction models: specify complete interaction sequences, show user actions and system responses, include error handling, consider edge cases, and provide implementable detail.",
+        "How is it similar to or different than related terms?": "Interaction models are detailed/procedural (step-by-step), scenarios are narrative (stories), task inventories are structural (hierarchies). Interaction models are most detailed, scenarios most contextual."
+      }
+    },
+    {
+      "id": 26,
+      "categoryId": 4,
+      "name": "Observations",
+      "definition": "Systematic watching and recording of users performing their work in natural settings to understand actual work practices and identify usability issues.",
+      "answers": {
+        "What does it mean?": "Observations involve systematically watching users perform their work in natural settings, carefully noting what they do, how they do it, tools they use, interactions with others, and problems they encounter.",
+        "Why is it important?": "Observations are critical because people often can't articulate their own practices (tacit knowledge), may describe idealized rather than actual behavior, and perform workarounds they don't consider worth mentioning.",
+        "When and/or where is it used?": "Observations are central to contextual inquiry, occurring in users' actual work environments during real work activities. They're used whenever understanding actual practice (vs. reported practice) is important.",
+        "What are some examples?": "Examples: watching a user struggle with a form, noting efficient keyboard shortcuts an expert uses, observing informal collaboration between coworkers, seeing workarounds users have developed.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Observations generate raw data during contextual inquiry. This data is captured in work activity notes, later analyzed to create flow models and work activity affinity diagrams, ultimately informing design.",
+        "What does it look like to do this well?": "Good observation involves: minimal interference with natural work, detailed note-taking, noticing both smooth and problematic moments, watching the whole context (not just screen), and asking clarifying questions without disrupting flow.",
+        "How is it similar to or different than related terms?": "Observations capture actual behavior (what happens), while interviews capture reported behavior (what users say happens). Observations are more objective but need interpretation; interviews provide subjective context and explanations."
+      }
+    },
+    {
+      "id": 51,
+      "categoryId": 4,
+      "name": "Work Environment Models",
+      "definition": "Design-informing models characterizing the physical and artifactual context where work occurs, including artifact models and physical models.",
+      "answers": {
+        "What does it mean?": "Work environment models characterize where and with what users work - the physical environment, artifacts they use, tools available, and contextual constraints. They include artifact and physical models.",
+        "Why is it important?": "Environment models are important because context affects system use - physical constraints, available artifacts, environmental factors all influence design requirements and feasibility.",
+        "When and/or where is it used?": "Environment models are created from contextual inquiry observations of work settings, then used in design to ensure solutions fit actual work environments and contexts.",
+        "What are some examples?": "Examples: artifact models showing forms and tools used, physical models showing workspace layouts, models of mobile/standing/sitting work contexts, lighting and noise conditions.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Environment models complete the DIM picture: user models show who, usage models show what/how, environment models show where/with what - together providing complete design context.",
+        "What does it look like to do this well?": "Effective environment models: capture relevant contextual factors, identify constraints that designs must accommodate, show artifacts that systems must integrate with or replace.",
+        "How is it similar to or different than related terms?": "Environment models describe context (where/with what), user models describe people (who), usage models describe activities (what/how). Environment provides the setting; user/usage provide the actors and actions."
+      }
+    },
+    {
+      "id": 27,
+      "categoryId": 4,
+      "name": "Work Activity Data",
+      "definition": "The raw information collected during contextual inquiry, including observations, interview responses, artifacts, and notes about work practices and context.",
+      "answers": {
+        "What does it mean?": "Work activity data is all the raw information gathered during contextual inquiry: observation notes, interview transcripts, photos, collected artifacts, sketches, and any other records of what was learned about user work.",
+        "Why is it important?": "This data is important because it's the foundation for all subsequent analysis. Rich, detailed work activity data enables creation of accurate models, extraction of real requirements, and deep understanding that informs design.",
+        "When and/or where is it used?": "Work activity data is collected during contextual inquiry sessions and becomes the input for contextual analysis activities like creating work activity notes, flow models, and affinity diagrams.",
+        "What are some examples?": "Examples: notes about a nurse's workflow, photos of a technician's workspace, a printed form users annotate, quotes from interviews, timing notes about task duration, sketches of physical layouts.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Work activity data flows from contextual inquiry into contextual analysis. It's the raw material that gets organized, interpreted, and synthesized into useful models and requirements that guide design.",
+        "What does it look like to do this well?": "Quality work activity data is: detailed and specific, captures context, includes verbatim quotes, records both successes and problems, notes emotional responses, and covers diverse situations and users.",
+        "How is it similar to or different than related terms?": "Work activity data is raw and uninterpreted, while work activity notes are organized interpretations. Data is the direct capture; analysis involves organizing and making sense of it."
+      }
+    },
+    {
+      "id": 28,
+      "categoryId": 4,
+      "name": "Work Artifacts",
+      "definition": "Physical or digital objects users create or interact with during their work, such as forms, documents, tools, notes, or output products.",
+      "answers": {
+        "What does it mean?": "Work artifacts are the physical and digital objects that are part of users' work - forms they fill out, documents they create, tools they use, notes they keep, Post-its on monitors, checklists, reports, etc.",
+        "Why is it important?": "Artifacts are important because they reveal actual work practices, show what information users need, demonstrate workarounds, and provide concrete examples of work inputs/outputs that systems must support.",
+        "When and/or where is it used?": "Artifacts are collected during contextual inquiry (photographed, copied, or noted), then analyzed to understand their role in work. They contribute to artifact models and inform requirements.",
+        "What are some examples?": "Examples: Post-it notes with passwords, printed forms users annotate, spreadsheets used for tracking, email templates, handwritten logs, checklists taped to monitors, customized tool configurations.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Artifacts are discovered during contextual inquiry, inform artifact models in design-informing models, and reveal requirements about information needs and workflows that must be supported in design.",
+        "What does it look like to do this well?": "Analyzing artifacts well involves: collecting/documenting them, understanding their purpose in work, noting modifications users make, identifying information they contain, and recognizing what needs they fulfill.",
+        "How is it similar to or different than related terms?": "Artifacts are concrete objects (things), while work activity data includes observations and notes (information about things and behaviors). Artifacts are physical/digital evidence of work practices."
+      }
+    },
+    {
+      "id": 54,
+      "categoryId": 5,
+      "name": "Design Thinking",
+      "definition": "A human-centered, iterative approach to problem-solving that emphasizes empathy, ideation, and experimentation to create innovative solutions.",
+      "answers": {
+        "What does it mean?": "Design thinking is a creative problem-solving approach that emphasizes understanding human needs (empathy), generating many ideas (ideation), and learning through making (prototyping/testing). It's iterative, user-centered, and exploratory.",
+        "Why is it important?": "Design thinking is important because it provides a structured yet flexible approach to innovation, helps teams break free from assumptions, encourages exploration, and keeps focus on real human needs rather than just technical possibilities.",
+        "When and/or where is it used?": "Design thinking is used throughout the Design phase, particularly in early conceptual design. It's applied when facing complex problems, seeking innovation, or needing to understand user needs deeply.",
+        "What are some examples?": "Examples: using empathy to understand user frustrations, brainstorming many solutions without judgment, rapidly prototyping ideas to test them, iterating based on feedback, considering emotional and ecological perspectives.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Design thinking shapes how Design is approached in the UX lifecycle - emphasizing empathy (from Analysis), ideation (generating options), and iteration (through prototyping and evaluation).",
+        "What does it look like to do this well?": "Good design thinking involves: deep empathy with users, divergent thinking (many ideas), deferring judgment, making ideas tangible quickly, testing and learning, iterating based on feedback.",
+        "How is it similar to or different than related terms?": "Design thinking is an approach/mindset (how to think about design), the design-thinking paradigm is a theoretical perspective (phenomenological), and specific methods like ideation are techniques within design thinking."
+      }
+    },
+    {
+      "id": 55,
+      "categoryId": 5,
+      "name": "Design (What is it?)",
+      "definition": "The intentional, creative process of envisioning and planning solutions - in UX, specifically focused on creating user experiences that are usable, useful, and delightful.",
+      "answers": {
+        "What does it mean?": "Design is the creative act of envisioning how things should be - planning solutions, making decisions about form and function, imagining possibilities. It's intentional creation guided by understanding and constraints.",
+        "Why is it important?": "Understanding what design is matters because it clarifies the designer's role (creative problem-solving, not just decoration), the design process (intentional exploration), and design's value (solving problems innovatively).",
+        "When and/or where is it used?": "Design as an activity occurs throughout the UX lifecycle's Design phase, from conceptual through detailed design. It's the creative, generative work that transforms requirements into solutions.",
+        "What are some examples?": "Examples of design activities: sketching interface concepts, planning interaction flows, choosing metaphors, making layout decisions, selecting visual styles, designing affordances.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Design sits between Analysis (understanding) and Implementation (building). It transforms insights from Analysis into specifications for Implementation through creative problem-solving.",
+        "What does it look like to do this well?": "Good design is: intentional (purposeful decisions), user-centered (based on user needs), creative (generating novel solutions), iterative (refining through feedback), and balanced (managing tradeoffs).",
+        "How is it similar to or different than related terms?": "Design is creative/generative (making solutions), while analysis is investigative (understanding problems) and evaluation is critical (judging solutions). Design is the central creative act in UX."
+      }
+    },
+    {
+      "id": 57,
+      "categoryId": 5,
+      "name": "Engineering Paradigm",
+      "definition": "A design approach focused on optimizing measurable performance metrics like speed, accuracy, and efficiency through systematic engineering methods.",
+      "answers": {
+        "What does it mean?": "The engineering paradigm approaches design as optimization of measurable performance - minimizing time, errors, and effort through systematic engineering methods and quantitative evaluation.",
+        "Why is it important?": "This paradigm is important for task efficiency and performance. It provides rigorous, measurable approaches to improving productivity and reducing errors, particularly important for work systems.",
+        "When and/or where is it used?": "The engineering paradigm is applied when performance optimization is critical - enterprise systems, productivity tools, safety-critical systems where efficiency and accuracy matter most.",
+        "What are some examples?": "Examples: optimizing button placement for fastest clicking, reducing steps in workflows, minimizing error rates through constraints, measuring and improving task completion times.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "The engineering paradigm emphasizes the usability (efficiency/effectiveness) aspect of UX, contributing systematic measurement and optimization methods to the design process.",
+        "What does it look like to do this well?": "Engineering paradigm done well: sets clear performance metrics, measures systematically, optimizes based on data, balances multiple performance criteria, validates improvements empirically.",
+        "How is it similar to or different than related terms?": "Engineering paradigm focuses on performance (speed/accuracy), HIP on cognition (mental processing), design-thinking on experience (emotional/phenomenological). Engineering is most quantitative and optimization-focused."
+      }
+    },
+    {
+      "id": 63,
+      "categoryId": 5,
+      "name": "Ecological Perspective",
+      "definition": "A design viewpoint focusing on how technology fits into the broader context of users' lives, work, and environment - the system in its ecology.",
+      "answers": {
+        "What does it mean?": "The ecological perspective views technology in its broader context - how it fits into users' lives, affects work practices, integrates with other tools, impacts social relationships, and influences overall life balance.",
+        "Why is it important?": "Ecological perspective is important because technology doesn't exist in isolation - it affects and is affected by work practices, social dynamics, other tools, and life balance. Ignoring ecology leads to adoption failures.",
+        "When and/or where is it used?": "Ecological perspective is applied when considering technology impact on work practices, integration with existing tools/workflows, social implications, and life balance effects.",
+        "What are some examples?": "Examples: considering how notifications affect focus, how collaboration tools change team dynamics, how automation affects job satisfaction, how mobile access affects work-life boundaries.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Ecological perspective informs Analysis (understanding current ecology) and Design (envisioning how new systems fit ecology), ensuring designs work within, not against, broader context.",
+        "What does it look like to do this well?": "Good ecological thinking: considers ripple effects, examines technology in life/work context, anticipates social impacts, thinks about integration with existing practices and tools.",
+        "How is it similar to or different than related terms?": "Ecological views context/environment (technology in life), interaction views dialogue (user-system exchange), emotional views feeling (affective response). Ecological is broadest, most contextual perspective."
+      }
+    },
+    {
+      "id": 67,
+      "categoryId": 5,
+      "name": "'Rich' and 'Sticky' Personas",
+      "definition": "Personas with enough detail and personality to be memorable and create empathy - they 'stick' in designers' minds.",
+      "answers": {
+        "What does it mean?": "Personas with sufficient detail, personality, and realistic qualities that make them memorable and help designers empathize and remember them easily.",
+        "Why is it important?": "Rich personas create empathy and are actually used; thin personas are forgotten. Stickiness ensures personas actually influence design decisions.",
+        "When and/or where is it used?": "When creating personas during Analysis - adding enough detail to make them real and relatable without overwhelming.",
+        "What are some examples?": "Including name, photo, background story, specific goals/frustrations, quotes, personality traits - making them feel like real people.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Rich personas are more effective design tools, more likely to be remembered and referenced during design work.",
+        "What does it look like to do this well?": "Balancing detail (enough to empathize) with conciseness (won't be read if too long), including humanizing details, using photos/names.",
+        "How is it similar to or different than related terms?": "Rich/sticky emphasizes quality (memorability), while primary/secondary emphasizes priority (which to design for first). Both are important persona characteristics."
+      }
+    },
+    {
+      "id": 71,
+      "categoryId": 5,
+      "name": "Idea Creation ('Go' Mode)",
+      "definition": "Divergent phase of ideation focused purely on generating many ideas without critique or judgment.",
+      "answers": {
+        "What does it mean?": "Divergent phase of ideation focused purely on generating many ideas without critique or judgment.",
+        "Why is it important?": "Idea Creation ('Go' Mode) is important for effective ideation and design exploration."
+      }
+    },
+    {
+      "id": 79,
+      "categoryId": 5,
+      "name": "Knowledge in the World vs. Knowledge in the Head",
+      "definition": "Information visible in interface (world) vs. remembered by user (head) - good design puts knowledge in world.",
+      "answers": {
+        "What does it mean?": "Information visible in interface (world) vs. remembered by user (head) - good design puts knowledge in world."
+      }
+    },
+    {
+      "id": 85,
+      "categoryId": 5,
+      "name": "Design Iterations",
+      "definition": "Repeated cycles of design-prototype-evaluate-refine, progressively improving designs.",
+      "answers": {
+        "What does it mean?": "Repeated cycles of design-prototype-evaluate-refine, progressively improving designs."
+      }
+    },
+    {
+      "id": 92,
+      "categoryId": 5,
+      "name": "Quantitative vs. Qualitative",
+      "definition": "Quantitative: numerical measurements. Qualitative: descriptive observations.",
+      "answers": {
+        "What does it mean?": "Quantitative: numerical measurements. Qualitative: descriptive observations."
+      }
+    },
+    {
+      "id": 96,
+      "categoryId": 5,
+      "name": "Human Memory Limitations",
+      "definition": "Designing for limited working memory - chunking, recognition over recall, external memory aids.",
+      "answers": {
+        "What does it mean?": "Designing for limited working memory - chunking, recognition over recall, external memory aids.",
+        "Why is it important?": "Human Memory Limitations is a fundamental usability principle affecting user experience quality."
+      }
+    },
+    {
+      "id": 117,
+      "categoryId": 5,
+      "name": "Visibility of System Status",
+      "definition": "System keeps users informed about what's happening through appropriate, timely feedback.",
+      "answers": {
+        "What does it mean?": "System keeps users informed about what's happening through appropriate, timely feedback.",
+        "Why is it important?": "One of Nielsen's 10 heuristics - fundamental to usability."
+      }
+    },
+    {
+      "id": 56,
+      "categoryId": 5,
+      "name": "Design Paradigms",
+      "definition": "Different theoretical frameworks for thinking about and approaching design, each emphasizing different aspects - engineering, cognitive, or phenomenological.",
+      "answers": {
+        "What does it mean?": "Design paradigms are fundamental frameworks for thinking about design - different perspectives on what matters most. The three paradigms are: engineering (optimizing performance), HIP (cognitive processing), and design-thinking (phenomenological experience).",
+        "Why is it important?": "Paradigms matter because they shape what designers pay attention to, what questions they ask, what they optimize for, and what methods they use. Different paradigms lead to different design outcomes.",
+        "When and/or where is it used?": "Paradigms are theoretical frameworks that guide design practice. Understanding them helps designers choose appropriate approaches for different contexts and avoid being limited by one perspective.",
+        "What are some examples?": "Examples: engineering paradigm optimizing task completion time, HIP paradigm reducing cognitive load, design-thinking paradigm creating delightful emotional experiences.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Design paradigms provide different lenses for the Design phase - each emphasizing different aspects of UX (performance, cognition, experience). Modern UX often combines insights from all three.",
+        "What does it look like to do this well?": "Effective use of paradigms involves: understanding each perspective's strengths, choosing appropriately for context, combining insights from multiple paradigms, and recognizing when you're operating within a particular paradigm.",
+        "How is it similar to or different than related terms?": "Paradigms are overarching frameworks (theoretical perspectives), while methods are specific techniques (practical tools), and design perspectives (ecological/interaction/emotional) are complementary views within design-thinking."
+      }
+    },
+    {
+      "id": 58,
+      "categoryId": 5,
+      "name": "Human-Information Processing (HIP) Paradigm",
+      "definition": "A design approach based on understanding human cognitive processes - perception, attention, memory, decision-making - and designing to support these processes.",
+      "answers": {
+        "What does it mean?": "The HIP paradigm approaches design by understanding human cognitive processes (perception, attention, memory, thinking) and creating designs that work with, not against, these processes.",
+        "Why is it important?": "HIP is important because it grounds design in cognitive science, helps designers understand and support how humans process information, and leads to interfaces that fit natural cognitive abilities and limitations.",
+        "When and/or where is it used?": "HIP paradigm is applied when cognitive factors are critical - complex information processing, learning systems, attention-demanding contexts, or when designing to minimize cognitive load.",
+        "What are some examples?": "Examples: using chunking to support memory limitations, visual hierarchy supporting attention, recognition over recall, clear feedback supporting understanding of system state.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "HIP paradigm contributes understanding of cognitive aspects to design, informing guidelines about memory, attention, and perception that improve usability and learnability.",
+        "What does it look like to do this well?": "HIP paradigm done well: applies cognitive principles appropriately, designs for cognitive strengths and limits, reduces unnecessary cognitive load, supports learning and memory.",
+        "How is it similar to or different than related terms?": "HIP focuses on cognition (mental processes), engineering on performance (measurable outcomes), design-thinking on experience (emotional/phenomenological). HIP is most cognitive-science grounded."
+      }
+    },
+    {
+      "id": 64,
+      "categoryId": 5,
+      "name": "Interaction Perspective",
+      "definition": "A design viewpoint focusing on the dynamic dialogue between user and system - the back-and-forth exchange of actions and responses.",
+      "answers": {
+        "What does it mean?": "The interaction perspective focuses on the user-system dialogue - how users act, how systems respond, the dynamics of the exchange, the interaction patterns and flows.",
+        "Why is it important?": "Interaction perspective is crucial because it focuses on the core of HCI - the interaction itself. Quality interaction is fundamental to usability and user experience.",
+        "When and/or where is it used?": "Interaction perspective is applied when designing interaction patterns, defining system responses, planning feedback, designing gestures/controls, and specifying interaction dynamics.",
+        "What are some examples?": "Examples: designing how a system responds to user input, planning feedback timing and form, creating intuitive gesture mappings, specifying state transitions, designing conversational flows.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Interaction perspective bridges user intent and system capability, informing interaction design, conceptual design, and detailed UI specifications throughout the Design phase.",
+        "What does it look like to do this well?": "Good interaction thinking: considers the full interaction loop (user action → system response → user perception), designs for immediate feedback, creates natural mappings, maintains interaction consistency.",
+        "How is it similar to or different than related terms?": "Interaction views dialogue/exchange (dynamic user-system communication), ecological views context (technology in life), emotional views feeling (affective response). Interaction is most focused on the UI level."
+      }
+    },
+    {
+      "id": 68,
+      "categoryId": 5,
+      "name": "Candidate Personas",
+      "definition": "Initial set of possible personas identified from research, before selecting which will be primary or secondary.",
+      "answers": {
+        "What does it mean?": "The initial set of potential personas identified from user research, representing different user types before prioritizing which are primary/secondary.",
+        "Why is it important?": "You typically identify more user types than you can design for primarily, so candidates must be prioritized.",
+        "When and/or where is it used?": "During persona creation in Analysis - after identifying user types but before selecting primary persona(s).",
+        "What are some examples?": "From research finding 5 user types, creating candidate personas for each, then selecting 1-2 as primary based on business goals and reach.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Candidate personas are created from analysis, then prioritized to identify primary persona(s) that will drive design.",
+        "What does it look like to do this well?": "Creating personas for all significant user types found, then systematically evaluating which to prioritize based on business impact and coverage.",
+        "How is it similar to or different than related terms?": "Candidates are the pool (all possibilities), primary is the selection (design priority). Candidates are created; primary is chosen from candidates."
+      }
+    },
+    {
+      "id": 72,
+      "categoryId": 5,
+      "name": "Critiquing ('Stop' Mode)",
+      "definition": "Convergent phase of ideation where ideas are evaluated, critiqued, and selected - separated from generation to avoid stifling creativity.",
+      "answers": {
+        "What does it mean?": "Convergent phase of ideation where ideas are evaluated, critiqued, and selected - separated from generation to avoid stifling creativity.",
+        "Why is it important?": "Critiquing ('Stop' Mode) is important for effective ideation and design exploration."
+      }
+    },
+    {
+      "id": 77,
+      "categoryId": 5,
+      "name": "Mental Models and Conceptual Design",
+      "definition": "Understanding user and designer mental models and creating conceptual designs that match user expectations and mental frameworks.",
+      "answers": {
+        "What does it mean?": "Mental models are internal representations of how things work. Conceptual design creates system concepts matching user mental models.",
+        "Why is it important?": "When system models match user models, systems are intuitive. Mismatches cause confusion and usability problems.",
+        "When and/or where is it used?": "Throughout design - understanding user models informs conceptual design, which guides detailed interaction and UI design.",
+        "What are some examples?": "Folder/file metaphor matches user mental model of document organization; shopping cart metaphor matches understanding of retail shopping.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Understanding mental models from Analysis informs conceptual Design, which drives detailed design and prototyping.",
+        "What does it look like to do this well?": "Understanding users' existing mental models, designing concepts that align with them, using appropriate metaphors.",
+        "How is it similar to or different than related terms?": "Mental models are cognitive (how users think), conceptual design is structural (system concept). Models inform concept creation."
+      }
+    },
+    {
+      "id": 80,
+      "categoryId": 5,
+      "name": "Cognitive Affordance",
+      "definition": "Mental action possibilities - what conceptual operations the interface supports or suggests.",
+      "answers": {
+        "What does it mean?": "Mental action possibilities - what conceptual operations the interface supports or suggests."
+      }
+    },
+    {
+      "id": 86,
+      "categoryId": 5,
+      "name": "Ideation, Conceptual Design, Intermediate Design, Detailed Design, Design Refinement",
+      "definition": "Progression from idea generation through concepts to intermediate specificity to full detail to polish.",
+      "answers": {
+        "What does it mean?": "Progression from idea generation through concepts to intermediate specificity to full detail to polish."
+      }
+    },
+    {
+      "id": 93,
+      "categoryId": 5,
+      "name": "Subjective vs. Objective",
+      "definition": "Subjective: opinions/feelings. Objective: observable facts.",
+      "answers": {
+        "What does it mean?": "Subjective: opinions/feelings. Objective: observable facts."
+      }
+    },
+    {
+      "id": 97,
+      "categoryId": 5,
+      "name": "UX Guidelines in Context of Interaction Cycle",
+      "definition": "Guidelines organized by interaction phases: planning, action, perception, interpretation, evaluation.",
+      "answers": {
+        "What does it mean?": "Guidelines organized by interaction phases: planning, action, perception, interpretation, evaluation.",
+        "Why is it important?": "UX Guidelines in Context of Interaction Cycle is a fundamental usability principle affecting user experience quality."
+      }
+    },
+    {
+      "id": 118,
+      "categoryId": 5,
+      "name": "Match Between System and Real World",
+      "definition": "System speaks user's language with familiar words, phrases, and concepts rather than jargon.",
+      "answers": {
+        "What does it mean?": "System speaks user's language with familiar words, phrases, and concepts rather than jargon.",
+        "Why is it important?": "One of Nielsen's 10 heuristics - fundamental to usability."
+      }
+    },
+    {
+      "id": 59,
+      "categoryId": 5,
+      "name": "Design-Thinking Paradigm",
+      "definition": "A design approach emphasizing the phenomenological - lived experience, meaning-making, and holistic human experience beyond just performance or cognition.",
+      "answers": {
+        "What does it mean?": "The design-thinking paradigm focuses on phenomenological concerns - the lived, felt experience of using systems, including meaning, emotion, aesthetics, and how technology fits into life holistically.",
+        "Why is it important?": "This paradigm is important because it addresses aspects of experience that engineering and HIP miss - emotional impact, meaning, aesthetics, values - which are increasingly important for product differentiation and user satisfaction.",
+        "When and/or where is it used?": "Design-thinking paradigm is applied in consumer products, experiences where emotional connection matters, and when designing for overall life experience rather than just task completion.",
+        "What are some examples?": "Examples: designing for presence and flow, creating emotionally resonant experiences, considering aesthetic pleasure, designing for meaning and values, thinking ecologically about technology in life context.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Design-thinking paradigm adds emotional impact and experiential quality to UX, complementing engineering (performance) and HIP (cognition) to create holistic user experiences.",
+        "What does it look like to do this well?": "Design-thinking done well: deeply empathizes with users, considers emotional and aesthetic dimensions, thinks ecologically about technology in life, creates meaningful experiences, balances phenomenological with practical.",
+        "How is it similar to or different than related terms?": "Design-thinking emphasizes experience/phenomenology, HIP emphasizes cognition, engineering emphasizes performance. Design-thinking is most qualitative and holistic, considering human experience beyond tasks."
+      }
+    },
+    {
+      "id": 61,
+      "categoryId": 5,
+      "name": "The Phenomenological Concept of Presence",
+      "definition": "The sense of 'being there' or engaged immersion in an experience - when technology becomes invisible and users feel present in the activity or virtual environment.",
+      "answers": {
+        "What does it mean?": "Presence is the phenomenological state where users feel fully immersed and engaged, technology becomes invisible, and they experience direct engagement with the activity or virtual environment without conscious awareness of the interface.",
+        "Why is it important?": "Presence is important because it represents peak user experience - when technology successfully gets out of the way and users feel directly engaged with their goals, creating flow states and deep satisfaction.",
+        "When and/or where is it used?": "Presence is a design goal in immersive environments (VR, games), but also valuable in any interface where minimizing friction and maximizing engagement matters.",
+        "What are some examples?": "Examples: VR experiences where users forget they're wearing a headset, games where players lose track of time, productivity tools that feel invisible, reading experiences where interface disappears.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Presence represents a goal of good design - when usability, usefulness, and emotional impact combine so well that the interface becomes transparent and users feel directly connected to their activity.",
+        "What does it look like to do this well?": "Designing for presence involves: minimizing friction, creating seamless interactions, reducing cognitive load, providing immediate feedback, maintaining flow, eliminating jarring interruptions.",
+        "How is it similar to or different than related terms?": "Presence is phenomenological (felt immersion), flow is psychological (optimal experience), usability is functional (easy to use). Presence is about consciousness and felt experience; usability enables it but isn't the same."
+      }
+    },
+    {
+      "id": 65,
+      "categoryId": 5,
+      "name": "Emotional Perspective",
+      "definition": "A design viewpoint focusing on affective responses - the emotions, feelings, and emotional impact users experience when interacting with systems.",
+      "answers": {
+        "What does it mean?": "The emotional perspective focuses on affective responses - what emotions the experience evokes, how it makes users feel, emotional impact of aesthetics, tone, and interaction qualities.",
+        "Why is it important?": "Emotional perspective is important because emotions strongly influence user behavior, satisfaction, and loyalty. Emotional connections differentiate products and create memorable experiences beyond mere functionality.",
+        "When and/or where is it used?": "Emotional perspective is applied when considering aesthetic choices, tone of voice, animation/delight factors, error message tone, and any aspect that influences emotional response.",
+        "What are some examples?": "Examples: choosing colors for emotional effect, crafting empathetic error messages, adding delightful animations, selecting friendly vs. professional tone, creating trust through visual design.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Emotional perspective contributes to the emotional impact component of UX, influencing visual design, copywriting, animation, and all aspects that shape affective response.",
+        "What does it look like to do this well?": "Good emotional thinking: considers intended emotional response, uses appropriate aesthetics and tone, adds delight where appropriate, shows empathy in messaging, builds trust through design.",
+        "How is it similar to or different than related terms?": "Emotional views feelings/affect (how it makes you feel), interaction views dialogue (how you interact), ecological views context (where it fits). Emotional is most focused on subjective affective response."
+      }
+    },
+    {
+      "id": 69,
+      "categoryId": 5,
+      "name": "Primary Persona",
+      "definition": "The main persona(s) for whom the product is primarily designed - their needs drive core design decisions.",
+      "answers": {
+        "What does it mean?": "The persona whose needs are the primary design driver - if satisfied, they'll be satisfied. Core functionality is optimized for them.",
+        "Why is it important?": "You can't optimize for everyone, so identifying the primary user type focuses design and prevents trying to please everyone (pleasing no one).",
+        "When and/or where is it used?": "Selected during Analysis, drives Design decisions, used to prioritize features and resolve tradeoffs.",
+        "What are some examples?": "For a professional tool, the experienced daily user is primary (not the manager who buys it or the new user).",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Primary persona is identified from analysis and becomes the main reference point for all design decisions.",
+        "What does it look like to do this well?": "Selecting based on business impact and reach, communicating clearly who is primary, consistently prioritizing their needs in tradeoffs.",
+        "How is it similar to or different than related terms?": "Primary drives design (optimized for), secondary considered but not optimized for, candidate is before selection. Primary has highest design priority."
+      }
+    },
+    {
+      "id": 73,
+      "categoryId": 5,
+      "name": "Brainstorming",
+      "definition": "Structured group ideation technique with rules like deferring judgment, encouraging wild ideas, building on others, and going for quantity.",
+      "answers": {
+        "What does it mean?": "Structured group ideation technique with rules like deferring judgment, encouraging wild ideas, building on others, and going for quantity.",
+        "Why is it important?": "Brainstorming is important for effective ideation and design exploration."
+      }
+    },
+    {
+      "id": 78,
+      "categoryId": 5,
+      "name": "Affordances",
+      "definition": "Properties of objects or interface elements that suggest how they can be used - the perceived and actual possibilities for action.",
+      "answers": {
+        "What does it mean?": "Affordances are action possibilities that objects offer - both actual (what's possible) and perceived (what users think is possible).",
+        "Why is it important?": "Good affordances make interfaces discoverable and intuitive - users understand what actions are possible without instruction.",
+        "When and/or where is it used?": "Considered throughout detailed design when creating interface elements - buttons, controls, interactive elements.",
+        "What are some examples?": "Button that looks pressable (physical affordance), underlined text suggesting clickability (sensory affordance), obvious drag handles (functional affordance).",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Affordances are key interaction design principles applied during Design phase, creating intuitive interfaces evaluated in Evaluation phase.",
+        "What does it look like to do this well?": "Making possible actions visible and obvious, using familiar patterns, providing clear visual cues for interactivity.",
+        "How is it similar to or different than related terms?": "Affordances suggest action possibilities, while feedback confirms actions. Affordances are prospective (before action); feedback is retrospective (after action)."
+      }
+    },
+    {
+      "id": 81,
+      "categoryId": 5,
+      "name": "Physical Affordance",
+      "definition": "Physical action possibilities - what physical manipulations are possible (clicking, dragging, touching).",
+      "answers": {
+        "What does it mean?": "Physical action possibilities - what physical manipulations are possible (clicking, dragging, touching)."
+      }
+    },
+    {
+      "id": 87,
+      "categoryId": 5,
+      "name": "Wireframes",
+      "definition": "Low-fidelity sketches or layouts showing structure, content, functionality without visual design.",
+      "answers": {
+        "What does it mean?": "Low-fidelity sketches or layouts showing structure, content, functionality without visual design."
+      }
+    },
+    {
+      "id": 94,
+      "categoryId": 5,
+      "name": "Baseline Level vs. Target Level",
+      "definition": "Baseline: current performance. Target: desired future performance.",
+      "answers": {
+        "What does it mean?": "Baseline: current performance. Target: desired future performance."
+      }
+    },
+    {
+      "id": 98,
+      "categoryId": 5,
+      "name": "Attractiveness/Aesthetics",
+      "definition": "Visual appeal and beauty - creates positive first impressions, builds trust, affects perceived usability.",
+      "answers": {
+        "What does it mean?": "Visual appeal and beauty - creates positive first impressions, builds trust, affects perceived usability.",
+        "Why is it important?": "Attractiveness/Aesthetics is a fundamental usability principle affecting user experience quality."
+      }
+    },
+    {
+      "id": 119,
+      "categoryId": 5,
+      "name": "User Control and Freedom",
+      "definition": "Users can undo/redo, exit flows easily - support exploratory learning without fear.",
+      "answers": {
+        "What does it mean?": "Users can undo/redo, exit flows easily - support exploratory learning without fear.",
+        "Why is it important?": "One of Nielsen's 10 heuristics - fundamental to usability."
+      }
+    },
+    {
+      "id": 60,
+      "categoryId": 5,
+      "name": "Phenomenological Concerns",
+      "definition": "Focus on the lived, subjective experience of using technology - how it feels, what it means, and how it fits into life - beyond objective performance or cognitive processing.",
+      "answers": {
+        "What does it mean?": "Phenomenological concerns focus on subjective lived experience - how using technology feels, what meaning it has, how it affects presence and consciousness - the qualitative, experiential aspects beyond performance.",
+        "Why is it important?": "These concerns are important because human experience isn't just cognitive processing or task performance - emotions, meanings, aesthetics, and life impact matter deeply for satisfaction and technology acceptance.",
+        "When and/or where is it used?": "Phenomenological concerns are considered in the design-thinking paradigm, particularly when designing consumer products, experiences, or any system where emotional impact and life integration matter.",
+        "What are some examples?": "Examples: designing for sense of presence in VR, creating flow experiences in games, building trust through aesthetics, considering meaning and values, designing for life balance not just productivity.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Phenomenological concerns shape the design-thinking paradigm's focus on emotional perspective, presence, and holistic experience, complementing task-focused and cognition-focused approaches.",
+        "What does it look like to do this well?": "Addressing phenomenological concerns well: empathizing deeply with lived experience, considering emotional and aesthetic dimensions, thinking about meaning and values, designing for life context not just tasks.",
+        "How is it similar to or different than related terms?": "Phenomenological is subjective/qualitative (how it feels), cognitive is mental-processing (how we think), engineering is objective/measurable (how it performs). Phenomenological addresses experience quality beyond function."
+      }
+    },
+    {
+      "id": 62,
+      "categoryId": 5,
+      "name": "Design Perspectives",
+      "definition": "Three complementary viewpoints for design: ecological (technology in life context), interaction (user-system dialogue), and emotional (affective experience).",
+      "answers": {
+        "What does it mean?": "Design perspectives are three complementary lenses for viewing design problems: ecological (how technology fits in life/work context), interaction (the user-system dialogue), and emotional (affective responses).",
+        "Why is it important?": "Multiple perspectives are important because looking from different angles reveals different insights and opportunities. Each perspective highlights aspects the others might miss, leading to more complete designs.",
+        "When and/or where is it used?": "Perspectives are applied throughout design work, helping designers consider multiple facets of the design problem and ensure they're addressing ecological context, interaction quality, and emotional impact.",
+        "What are some examples?": "Examples: ecological view considers work disruption, interaction view considers gesture intuitiveness, emotional view considers delight - same feature examined from three angles.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Perspectives structure design thinking within the design-thinking paradigm, ensuring designers consider context, interaction, and emotion - creating holistic solutions.",
+        "What does it look like to do this well?": "Using perspectives well: deliberately shift between views, ensure all three are considered, recognize which perspective is most critical for specific design problems, integrate insights from all three.",
+        "How is it similar to or different than related terms?": "Perspectives are complementary viewpoints (ways of looking), paradigms are theoretical frameworks (ways of thinking about design). Perspectives operate within the design-thinking paradigm."
+      }
+    },
+    {
+      "id": 74,
+      "categoryId": 5,
+      "name": "Sketching",
+      "definition": "Rapidly drawing rough representations of ideas to explore concepts quickly and make thinking visible.",
+      "answers": {
+        "What does it mean?": "Rapidly drawing rough representations of ideas to explore concepts quickly and make thinking visible.",
+        "Why is it important?": "Sketching is important for effective ideation and design exploration."
+      }
+    },
+    {
+      "id": 82,
+      "categoryId": 5,
+      "name": "Sensory Affordance",
+      "definition": "Perceptual cues suggesting affordances - visual, auditory, tactile indicators of action possibilities.",
+      "answers": {
+        "What does it mean?": "Perceptual cues suggesting affordances - visual, auditory, tactile indicators of action possibilities."
+      }
+    },
+    {
+      "id": 88,
+      "categoryId": 5,
+      "name": "Wireframing Tools",
+      "definition": "Software for creating wireframes - Balsamiq, Sketch, Figma, etc.",
+      "answers": {
+        "What does it mean?": "Software for creating wireframes - Balsamiq, Sketch, Figma, etc."
+      }
+    },
+    {
+      "id": 95,
+      "categoryId": 5,
+      "name": "UX Design Guidelines/Heuristics",
+      "definition": "Established principles and rules of thumb for creating usable interfaces, based on research and practice.",
+      "answers": {
+        "What does it mean?": "Proven principles guiding interface design - generalizable rules helping create usable, learnable, efficient interfaces.",
+        "Why is it important?": "Codify best practices, provide design guidance, enable consistent quality, help identify problems in evaluation.",
+        "When and/or where is it used?": "Referenced during Design to guide decisions, and during Evaluation (heuristic evaluation) to identify problems.",
+        "What are some examples?": "Consistency, feedback, error prevention, recognition over recall, aesthetic and minimalist design.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Guidelines inform Design decisions and provide Evaluation criteria in heuristic evaluation.",
+        "What does it look like to do this well?": "Understanding principles deeply, applying appropriately to context, balancing when guidelines conflict, using in design reviews.",
+        "How is it similar to or different than related terms?": "Guidelines are general principles, while requirements are specific to project. Guidelines inform how to meet requirements."
+      }
+    },
+    {
+      "id": 99,
+      "categoryId": 5,
+      "name": "Accessibility",
+      "definition": "Ensuring interfaces are usable by people with diverse abilities - vision, hearing, motor, cognitive.",
+      "answers": {
+        "What does it mean?": "Ensuring interfaces are usable by people with diverse abilities - vision, hearing, motor, cognitive.",
+        "Why is it important?": "Accessibility is a fundamental usability principle affecting user experience quality."
+      }
+    },
+    {
+      "id": 120,
+      "categoryId": 5,
+      "name": "Consistency and Standards",
+      "definition": "Follow platform conventions - users shouldn't wonder if different words/actions mean same thing.",
+      "answers": {
+        "What does it mean?": "Follow platform conventions - users shouldn't wonder if different words/actions mean same thing.",
+        "Why is it important?": "One of Nielsen's 10 heuristics - fundamental to usability."
+      }
+    },
+    {
+      "id": 66,
+      "categoryId": 5,
+      "name": "Designing with Personas",
+      "definition": "Using personas as design tools to guide decisions, maintain user focus, and create empathy throughout the design process.",
+      "answers": {
+        "What does it mean?": "Using personas actively in design decisions - referring to them when making choices, asking 'what would Sarah need here?', using them to resolve disagreements.",
+        "Why is it important?": "Maintains user focus, prevents designing for yourself, creates shared understanding, helps prioritize features based on user needs.",
+        "When and/or where is it used?": "Throughout design activities - when brainstorming, making decisions, resolving conflicts, prioritizing features, evaluating designs.",
+        "What are some examples?": "Asking 'Would this work for Sarah the nurse?', prioritizing features based on primary persona needs, using personas in scenarios and storyboards.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Personas created in Analysis are actively used throughout Design to guide decisions, appear in scenarios, and inform evaluation criteria.",
+        "What does it look like to do this well?": "Actually referring to personas during work, using them to resolve disagreements, creating scenarios with them, keeping them visible and top-of-mind.",
+        "How is it similar to or different than related terms?": "Designing with personas is active use (application), while creating personas is research synthesis (development). Using personas is a practice; personas are artifacts."
+      }
+    },
+    {
+      "id": 75,
+      "categoryId": 5,
+      "name": "Physical Mockups",
+      "definition": "Creating rough physical 3D representations of ideas using cardboard, foam, etc. to explore physical form.",
+      "answers": {
+        "What does it mean?": "Creating rough physical 3D representations of ideas using cardboard, foam, etc. to explore physical form.",
+        "Why is it important?": "Physical Mockups is important for effective ideation and design exploration."
+      }
+    },
+    {
+      "id": 83,
+      "categoryId": 5,
+      "name": "Functional Affordance",
+      "definition": "Higher-level action possibilities - what tasks or functions the interface supports.",
+      "answers": {
+        "What does it mean?": "Higher-level action possibilities - what tasks or functions the interface supports."
+      }
+    },
+    {
+      "id": 84,
+      "categoryId": 5,
+      "name": "Design Production",
+      "definition": "The progression from conceptual ideas through increasingly detailed and refined designs ready for implementation.",
+      "answers": {
+        "What does it mean?": "The process of moving from rough concepts through intermediate and detailed design to refined specifications.",
+        "Why is it important?": "Bridges conceptual ideas and implementation - transforms concepts into implementable specifications.",
+        "When and/or where is it used?": "After conceptual design, progressing through iterations to produce detailed designs for development.",
+        "What are some examples?": "Moving from sketches to wireframes to detailed comps, increasing fidelity and specificity at each stage.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Design production follows ideation/conceptual design, producing artifacts that guide prototyping and implementation.",
+        "What does it look like to do this well?": "Progressing systematically from rough to refined, validating at each level, specifying increasing detail appropriately.",
+        "How is it similar to or different than related terms?": "Design production is the progression process, while specific artifacts (wireframes, comps) are outputs at different stages."
+      }
+    },
+    {
+      "id": 89,
+      "categoryId": 5,
+      "name": "Visual Comps",
+      "definition": "High-fidelity visual compositions showing final look with actual colors, typography, imagery.",
+      "answers": {
+        "What does it mean?": "High-fidelity visual compositions showing final look with actual colors, typography, imagery."
+      }
+    },
+    {
+      "id": 100,
+      "categoryId": 5,
+      "name": "Efficiency",
+      "definition": "Minimizing time and effort required to accomplish tasks - streamlined workflows, shortcuts for experts.",
+      "answers": {
+        "What does it mean?": "Minimizing time and effort required to accomplish tasks - streamlined workflows, shortcuts for experts.",
+        "Why is it important?": "Efficiency is a fundamental usability principle affecting user experience quality."
+      }
+    },
+    {
+      "id": 121,
+      "categoryId": 5,
+      "name": "Error Prevention",
+      "definition": "Eliminate error-prone conditions or check for them and present confirmation before committing.",
+      "answers": {
+        "What does it mean?": "Eliminate error-prone conditions or check for them and present confirmation before committing.",
+        "Why is it important?": "One of Nielsen's 10 heuristics - fundamental to usability."
+      }
+    },
+    {
+      "id": 70,
+      "categoryId": 5,
+      "name": "Ideation",
+      "definition": "The process of generating many diverse ideas rapidly, typically including both divergent (generating) and convergent (selecting) phases.",
+      "answers": {
+        "What does it mean?": "The creative process of generating many ideas quickly, including 'go mode' (divergent idea generation) and 'stop mode' (convergent critique/selection).",
+        "Why is it important?": "More ideas increase chances of finding good solutions. Separating generation from critique prevents premature rejection of promising ideas.",
+        "When and/or where is it used?": "Early in design, particularly conceptual design - when exploring possibilities before committing to specific directions.",
+        "What are some examples?": "Brainstorming sessions, sketching many concepts rapidly, exploring diverse approaches before selecting which to develop.",
+        "If it's part of a process, how does it fit into the process and how does it relate to other parts of the process?": "Ideation happens in early Design phase, generating options that will be prototyped, evaluated, and refined through iteration.",
+        "What does it look like to do this well?": "Separating generation and critique, encouraging wild ideas, building on others' ideas, deferring judgment, generating quantity.",
+        "How is it similar to or different than related terms?": "Ideation is divergent/generative (creating options), while design refinement is convergent (narrowing options). Ideation creates possibilities; iteration refines them."
+      }
+    },
+    {
+      "id": 76,
+      "categoryId": 5,
+      "name": "Design Sketch vs. Low-Fidelity Prototype",
+      "definition": "Sketches are quick explorations for thinking; low-fi prototypes are for testing/communication - sketches are more disposable.",
+      "answers": {
+        "What does it mean?": "Sketches are quick explorations for thinking; low-fi prototypes are for testing/communication - sketches are more disposable.",
+        "Why is it important?": "Design Sketch vs. Low-Fidelity Prototype is important for effective ideation and design exploration."
+      }
+    },
+    {
+      "id": 90,
+      "categoryId": 5,
+      "name": "UX Goals, Metrics, and Targets",
+      "definition": "Specific, measurable objectives for UX quality with target values to achieve.",
+      "answers": {
+        "What does it mean?": "Specific, measurable objectives for UX quality with target values to achieve."
+      }
+    },
+    {
+      "id": 101,
+      "categoryId": 5,
+      "name": "Memorability",
+      "definition": "Easy to remember after periods of non-use - consistent patterns, recognition cues, clear structure.",
+      "answers": {
+        "What does it mean?": "Easy to remember after periods of non-use - consistent patterns, recognition cues, clear structure.",
+        "Why is it important?": "Memorability is a fundamental usability principle affecting user experience quality."
+      }
+    },
+    {
+      "id": 122,
+      "categoryId": 5,
+      "name": "Recognition Rather Than Recall",
+      "definition": "Minimize memory load by making objects, actions, options visible - don't make users remember.",
+      "answers": {
+        "What does it mean?": "Minimize memory load by making objects, actions, options visible - don't make users remember.",
+        "Why is it important?": "One of Nielsen's 10 heuristics - fundamental to usability."
+      }
+    },
+    {
+      "id": 91,
+      "categoryId": 5,
+      "name": "Metrics",
+      "definition": "Measurements used to assess UX quality - can be quantitative/qualitative, subjective/objective, baseline/target.",
+      "answers": {
+        "What does it mean?": "Measurements for assessing UX - various types depending on what's measured and how."
+      }
+    },
+    {
+      "id": 102,
+      "categoryId": 5,
+      "name": "Error Prevention",
+      "definition": "Designing to prevent errors before they occur - constraints, confirmations, clear affordances.",
+      "answers": {
+        "What does it mean?": "Designing to prevent errors before they occur - constraints, confirmations, clear affordances.",
+        "Why is it important?": "Error Prevention is a fundamental usability principle affecting user experience quality."
+      }
+    },
+    {
+      "id": 123,
+      "categoryId": 5,
+      "name": "Flexibility and Efficiency of Use",
+      "definition": "Shortcuts for experts, allowing customization - serves both novice and expert users.",
+      "answers": {
+        "What does it mean?": "Shortcuts for experts, allowing customization - serves both novice and expert users.",
+        "Why is it important?": "One of Nielsen's 10 heuristics - fundamental to usability."
+      }
+    },
+    {
+      "id": 103,
+      "categoryId": 5,
+      "name": "Robustness",
+      "definition": "Handling errors gracefully - helpful error messages, easy recovery, forgiving of mistakes.",
+      "answers": {
+        "What does it mean?": "Handling errors gracefully - helpful error messages, easy recovery, forgiving of mistakes.",
+        "Why is it important?": "Robustness is a fundamental usability principle affecting user experience quality."
+      }
+    },
+    {
+      "id": 124,
+      "categoryId": 5,
+      "name": "Aesthetic and Minimalist Design",
+      "definition": "Interfaces shouldn't contain irrelevant or rarely needed information - every extra unit competes.",
+      "answers": {
+        "What does it mean?": "Interfaces shouldn't contain irrelevant or rarely needed information - every extra unit competes.",
+        "Why is it important?": "One of Nielsen's 10 heuristics - fundamental to usability."
+      }
+    },
+    {
+      "id": 104,
+      "categoryId": 5,
+      "name": "Satisfaction",
+      "definition": "Creating positive feelings - pleasant experience, meets expectations, emotionally satisfying.",
+      "answers": {
+        "What does it mean?": "Creating positive feelings - pleasant experience, meets expectations, emotionally satisfying.",
+        "Why is it important?": "Satisfaction is a fundamental usability principle affecting user experience quality."
+      }
+    },
+    {
+      "id": 125,
+      "categoryId": 5,
+      "name": "Help Users Recognize, Diagnose, and Recover from Errors",
+      "definition": "Error messages in plain language, precisely indicate problem, constructively suggest solution.",
+      "answers": {
+        "What does it mean?": "Error messages in plain language, precisely indicate problem, constructively suggest solution.",
+        "Why is it important?": "One of Nielsen's 10 heuristics - fundamental to usability."
+      }
+    },
+    {
+      "id": 105,
+      "categoryId": 5,
+      "name": "Functionality",
+      "definition": "Providing necessary features and capabilities - system does what users need.",
+      "answers": {
+        "What does it mean?": "Providing necessary features and capabilities - system does what users need.",
+        "Why is it important?": "Functionality is a fundamental usability principle affecting user experience quality."
+      }
+    },
+    {
+      "id": 126,
+      "categoryId": 5,
+      "name": "Help and Documentation",
+      "definition": "Provide searchable, focused help - list concrete steps, not too large, accessible when needed.",
+      "answers": {
+        "What does it mean?": "Provide searchable, focused help - list concrete steps, not too large, accessible when needed.",
+        "Why is it important?": "One of Nielsen's 10 heuristics - fundamental to usability."
+      }
+    },
+    {
+      "id": 106,
+      "categoryId": 5,
+      "name": "Operability",
+      "definition": "Ease of operation and control - intuitive interactions, clear controls, user has control.",
+      "answers": {
+        "What does it mean?": "Ease of operation and control - intuitive interactions, clear controls, user has control.",
+        "Why is it important?": "Operability is a fundamental usability principle affecting user experience quality."
+      }
+    },
+    {
+      "id": 107,
+      "categoryId": 5,
+      "name": "Learnability",
+      "definition": "Easy for new users to learn - clear, consistent, builds on existing knowledge.",
+      "answers": {
+        "What does it mean?": "Easy for new users to learn - clear, consistent, builds on existing knowledge.",
+        "Why is it important?": "Learnability is a fundamental usability principle affecting user experience quality."
+      }
+    },
+    {
+      "id": 108,
+      "categoryId": 5,
+      "name": "Understandability",
+      "definition": "Easy to understand what system does and how - clear labels, obvious functions, good information architecture.",
+      "answers": {
+        "What does it mean?": "Easy to understand what system does and how - clear labels, obvious functions, good information architecture.",
+        "Why is it important?": "Understandability is a fundamental usability principle affecting user experience quality."
+      }
+    },
+    {
+      "id": 109,
+      "categoryId": 5,
+      "name": "Simplicity",
+      "definition": "Removing unnecessary complexity - simple as possible but not simpler, avoiding feature bloat.",
+      "answers": {
+        "What does it mean?": "Removing unnecessary complexity - simple as possible but not simpler, avoiding feature bloat.",
+        "Why is it important?": "Simplicity is a fundamental usability principle affecting user experience quality."
+      }
+    },
+    {
+      "id": 110,
+      "categoryId": 5,
+      "name": "Visibility",
+      "definition": "Making important information and controls visible - don't hide critical functions, clear status.",
+      "answers": {
+        "What does it mean?": "Making important information and controls visible - don't hide critical functions, clear status.",
+        "Why is it important?": "Visibility is a fundamental usability principle affecting user experience quality."
+      }
+    },
+    {
+      "id": 111,
+      "categoryId": 5,
+      "name": "Feedback",
+      "definition": "System responds to actions - immediate, clear feedback confirming actions and showing results.",
+      "answers": {
+        "What does it mean?": "System responds to actions - immediate, clear feedback confirming actions and showing results.",
+        "Why is it important?": "Feedback is a fundamental usability principle affecting user experience quality."
+      }
+    },
+    {
+      "id": 112,
+      "categoryId": 5,
+      "name": "Consistency",
+      "definition": "Similar things look and behave similarly - internal consistency and external (platform) consistency.",
+      "answers": {
+        "What does it mean?": "Similar things look and behave similarly - internal consistency and external (platform) consistency.",
+        "Why is it important?": "Consistency is a fundamental usability principle affecting user experience quality."
+      }
+    },
+    {
+      "id": 113,
+      "categoryId": 5,
+      "name": "Constraints",
+      "definition": "Limiting actions to valid options - prevents errors, guides users to correct actions.",
+      "answers": {
+        "What does it mean?": "Limiting actions to valid options - prevents errors, guides users to correct actions.",
+        "Why is it important?": "Constraints is a fundamental usability principle affecting user experience quality."
+      }
+    },
+    {
+      "id": 114,
+      "categoryId": 5,
+      "name": "Natural Mappings",
+      "definition": "Logical relationships between controls and effects - spatial, cultural, or semantic mappings.",
+      "answers": {
+        "What does it mean?": "Logical relationships between controls and effects - spatial, cultural, or semantic mappings.",
+        "Why is it important?": "Natural Mappings is a fundamental usability principle affecting user experience quality."
+      }
+    },
+    {
+      "id": 115,
+      "categoryId": 5,
+      "name": "Usefulness",
+      "definition": "System provides value - solves real problems, meets real needs.",
+      "answers": {
+        "What does it mean?": "System provides value - solves real problems, meets real needs.",
+        "Why is it important?": "Usefulness is a fundamental usability principle affecting user experience quality."
+      }
+    },
+    {
+      "id": 116,
+      "categoryId": 5,
+      "name": "Nielsen's Original Heuristics",
+      "definition": "Jakob Nielsen's influential set of 10 usability heuristics for interface design and evaluation.",
+      "answers": {
+        "What does it mean?": "Ten widely-used heuristics by Jakob Nielsen for designing and evaluating interfaces.",
+        "Why is it important?": "Most famous and widely-used heuristic set - provides concrete guidelines for design and evaluation.",
+        "When and/or where is it used?": "Used in heuristic evaluation and as design guidelines throughout interface design."
+      }
+    },
+    {
+      "id": 127,
+      "categoryId": 6,
+      "name": "Depth and Breadth in Prototypes",
+      "definition": "Tradeoff between implementing features deeply (detail/functionality) vs. broadly (coverage/scope) - limited by time/resources.",
+      "answers": {
+        "What does it mean?": "Tradeoff between implementing features deeply (detail/functionality) vs. broadly (coverage/scope) - limited by time/resources.",
+        "Why is it important?": "Depth and Breadth in Prototypes important for effective prototyping and testing.",
+        "When and/or where is it used?": "Used during Prototyping phase to explore and test designs."
+      }
+    },
+    {
+      "id": 128,
+      "categoryId": 6,
+      "name": "Vertical vs. Horizontal vs. 'T' vs. Local Prototypes",
+      "definition": "Vertical: deep on few features. Horizontal: shallow on many features. T: deep on some, shallow on others. Local: small isolated piece.",
+      "answers": {
+        "What does it mean?": "Vertical: deep on few features. Horizontal: shallow on many features. T: deep on some, shallow on others. Local: small isolated piece.",
+        "Why is it important?": "Vertical vs. Horizontal vs. 'T' vs. Local Prototypes important for effective prototyping and testing.",
+        "When and/or where is it used?": "Used during Prototyping phase to explore and test designs."
+      }
+    },
+    {
+      "id": 129,
+      "categoryId": 6,
+      "name": "Fidelity of Prototypes",
+      "definition": "How closely prototype resembles final product - from low-fidelity sketches to high-fidelity interactive mockups.",
+      "answers": {
+        "What does it mean?": "How closely prototype resembles final product - from low-fidelity sketches to high-fidelity interactive mockups.",
+        "Why is it important?": "Fidelity of Prototypes important for effective prototyping and testing.",
+        "When and/or where is it used?": "Used during Prototyping phase to explore and test designs."
+      }
+    },
+    {
+      "id": 130,
+      "categoryId": 6,
+      "name": "Interactivity of Prototypes",
+      "definition": "Degree to which prototype responds to user input - from static images to fully interactive simulations.",
+      "answers": {
+        "What does it mean?": "Degree to which prototype responds to user input - from static images to fully interactive simulations.",
+        "Why is it important?": "Interactivity of Prototypes important for effective prototyping and testing.",
+        "When and/or where is it used?": "Used during Prototyping phase to explore and test designs."
+      }
+    },
+    {
+      "id": 131,
+      "categoryId": 6,
+      "name": "Click-Through Prototype",
+      "definition": "Interactive prototype where users click through screens/states - simulates navigation without full functionality.",
+      "answers": {
+        "What does it mean?": "Interactive prototype where users click through screens/states - simulates navigation without full functionality.",
+        "Why is it important?": "Click-Through Prototype important for effective prototyping and testing.",
+        "When and/or where is it used?": "Used during Prototyping phase to explore and test designs."
+      }
+    },
+    {
+      "id": 132,
+      "categoryId": 6,
+      "name": "Wizard of Oz (WoZ) Prototyping",
+      "definition": "Human secretly provides system responses - lets you test concepts before building AI/complex functionality.",
+      "answers": {
+        "What does it mean?": "Human secretly provides system responses - lets you test concepts before building AI/complex functionality.",
+        "Why is it important?": "Wizard of Oz (WoZ) Prototyping important for effective prototyping and testing.",
+        "When and/or where is it used?": "Used during Prototyping phase to explore and test designs."
+      }
+    },
+    {
+      "id": 133,
+      "categoryId": 6,
+      "name": "Paper-in-Device Prototype",
+      "definition": "Paper screens placed in device frame - combines physical device feel with quick iteration of paper.",
+      "answers": {
+        "What does it mean?": "Paper screens placed in device frame - combines physical device feel with quick iteration of paper.",
+        "Why is it important?": "Paper-in-Device Prototype important for effective prototyping and testing.",
+        "When and/or where is it used?": "Used during Prototyping phase to explore and test designs."
+      }
+    },
+    {
+      "id": 134,
+      "categoryId": 6,
+      "name": "Animated Prototype",
+      "definition": "Prototype using animation to show transitions, micro-interactions, or temporal aspects of interaction.",
+      "answers": {
+        "What does it mean?": "Prototype using animation to show transitions, micro-interactions, or temporal aspects of interaction.",
+        "Why is it important?": "Animated Prototype important for effective prototyping and testing.",
+        "When and/or where is it used?": "Used during Prototyping phase to explore and test designs."
+      }
+    },
+    {
+      "id": 135,
+      "categoryId": 6,
+      "name": "Video Prototype",
+      "definition": "Video showing envisioned interaction - good for communicating concepts and getting early feedback.",
+      "answers": {
+        "What does it mean?": "Video showing envisioned interaction - good for communicating concepts and getting early feedback.",
+        "Why is it important?": "Video Prototype important for effective prototyping and testing.",
+        "When and/or where is it used?": "Used during Prototyping phase to explore and test designs."
+      }
+    },
+    {
+      "id": 136,
+      "categoryId": 6,
+      "name": "Prototyping Tools",
+      "definition": "Software for creating prototypes - Figma, Sketch, Adobe XD, InVision, etc.",
+      "answers": {
+        "What does it mean?": "Software for creating prototypes - Figma, Sketch, Adobe XD, InVision, etc.",
+        "Why is it important?": "Prototyping Tools important for effective prototyping and testing.",
+        "When and/or where is it used?": "Used during Prototyping phase to explore and test designs."
+      }
+    },
+    {
+      "id": 137,
+      "categoryId": 7,
+      "name": "Formative vs. Summative",
+      "definition": "Formative: during development to improve design. Summative: after development to assess overall quality.",
+      "answers": {
+        "What does it mean?": "Formative: during development to improve design. Summative: after development to assess overall quality.",
+        "Why is it important?": "Formative vs. Summative helps assess design quality and identify improvements.",
+        "When and/or where is it used?": "Applied during Evaluation phase to validate and improve designs."
+      }
+    },
+    {
+      "id": 138,
+      "categoryId": 7,
+      "name": "Analytic vs. Empirical",
+      "definition": "Analytic: expert inspection without users. Empirical: testing with real users.",
+      "answers": {
+        "What does it mean?": "Analytic: expert inspection without users. Empirical: testing with real users.",
+        "Why is it important?": "Analytic vs. Empirical helps assess design quality and identify improvements.",
+        "When and/or where is it used?": "Applied during Evaluation phase to validate and improve designs."
+      }
+    },
+    {
+      "id": 139,
+      "categoryId": 7,
+      "name": "Rapid vs. Rigorous",
+      "definition": "Rapid: quick, informal evaluation for fast feedback. Rigorous: formal, controlled studies for definitive findings.",
+      "answers": {
+        "What does it mean?": "Rapid: quick, informal evaluation for fast feedback. Rigorous: formal, controlled studies for definitive findings.",
+        "Why is it important?": "Rapid vs. Rigorous helps assess design quality and identify improvements.",
+        "When and/or where is it used?": "Applied during Evaluation phase to validate and improve designs."
+      }
+    },
+    {
+      "id": 140,
+      "categoryId": 7,
+      "name": "Qualitative vs. Quantitative Data",
+      "definition": "Qualitative: descriptive, rich observations. Quantitative: numerical measurements and statistics.",
+      "answers": {
+        "What does it mean?": "Qualitative: descriptive, rich observations. Quantitative: numerical measurements and statistics.",
+        "Why is it important?": "Qualitative vs. Quantitative Data helps assess design quality and identify improvements.",
+        "When and/or where is it used?": "Applied during Evaluation phase to validate and improve designs."
+      }
+    },
+    {
+      "id": 141,
+      "categoryId": 7,
+      "name": "Subjective vs. Objective Data",
+      "definition": "Subjective: opinions, feelings, satisfaction. Objective: measurable facts, performance metrics.",
+      "answers": {
+        "What does it mean?": "Subjective: opinions, feelings, satisfaction. Objective: measurable facts, performance metrics.",
+        "Why is it important?": "Subjective vs. Objective Data helps assess design quality and identify improvements.",
+        "When and/or where is it used?": "Applied during Evaluation phase to validate and improve designs."
+      }
+    },
+    {
+      "id": 142,
+      "categoryId": 7,
+      "name": "Design Walkthrough",
+      "definition": "Expert systematically walks through design imagining user actions and identifying issues.",
+      "answers": {
+        "What does it mean?": "Expert systematically walks through design imagining user actions and identifying issues.",
+        "Why is it important?": "Design Walkthrough helps assess design quality and identify improvements.",
+        "When and/or where is it used?": "Applied during Evaluation phase to validate and improve designs."
+      }
+    },
+    {
+      "id": 143,
+      "categoryId": 7,
+      "name": "Usability Inspection",
+      "definition": "Expert examines interface against criteria to identify usability problems.",
+      "answers": {
+        "What does it mean?": "Expert examines interface against criteria to identify usability problems.",
+        "Why is it important?": "Usability Inspection helps assess design quality and identify improvements.",
+        "When and/or where is it used?": "Applied during Evaluation phase to validate and improve designs."
+      }
+    },
+    {
+      "id": 144,
+      "categoryId": 7,
+      "name": "Heuristic Evaluation",
+      "definition": "Experts evaluate interface against established heuristics/guidelines (like Nielsen's 10).",
+      "answers": {
+        "What does it mean?": "Experts evaluate interface against established heuristics/guidelines (like Nielsen's 10).",
+        "Why is it important?": "Heuristic Evaluation helps assess design quality and identify improvements.",
+        "When and/or where is it used?": "Applied during Evaluation phase to validate and improve designs."
+      }
+    },
+    {
+      "id": 145,
+      "categoryId": 7,
+      "name": "RITE (Rapid Iterative Testing and Evaluation)",
+      "definition": "Rapid testing methodology where problems are fixed immediately and retested.",
+      "answers": {
+        "What does it mean?": "Rapid testing methodology where problems are fixed immediately and retested.",
+        "Why is it important?": "RITE (Rapid Iterative Testing and Evaluation) helps assess design quality and identify improvements.",
+        "When and/or where is it used?": "Applied during Evaluation phase to validate and improve designs."
+      }
+    },
+    {
+      "id": 146,
+      "categoryId": 7,
+      "name": "Rigorous Lab-Based Evaluation",
+      "definition": "Formal usability testing with controlled conditions, representative users, measurable outcomes.",
+      "answers": {
+        "What does it mean?": "Formal usability testing with controlled conditions, representative users, measurable outcomes.",
+        "Why is it important?": "Rigorous Lab-Based Evaluation helps assess design quality and identify improvements.",
+        "When and/or where is it used?": "Applied during Evaluation phase to validate and improve designs."
+      }
+    },
+    {
+      "id": 147,
+      "categoryId": 7,
+      "name": "Quasi-Empirical UX Evaluation",
+      "definition": "User testing that's less formal than rigorous lab studies but more systematic than informal testing.",
+      "answers": {
+        "What does it mean?": "User testing that's less formal than rigorous lab studies but more systematic than informal testing.",
+        "Why is it important?": "Quasi-Empirical UX Evaluation helps assess design quality and identify improvements.",
+        "When and/or where is it used?": "Applied during Evaluation phase to validate and improve designs."
+      }
+    },
+    {
+      "id": 148,
+      "categoryId": 7,
+      "name": "Questionnaires",
+      "definition": "Written surveys gathering user feedback, satisfaction ratings, preferences, and opinions.",
+      "answers": {
+        "What does it mean?": "Written surveys gathering user feedback, satisfaction ratings, preferences, and opinions.",
+        "Why is it important?": "Questionnaires helps assess design quality and identify improvements.",
+        "When and/or where is it used?": "Applied during Evaluation phase to validate and improve designs."
+      }
+    },
+    {
+      "id": 149,
+      "categoryId": 7,
+      "name": "'Discount' Evaluation",
+      "definition": "Quick, low-cost evaluation methods like simplified usability testing - lower rigor but faster insights.",
+      "answers": {
+        "What does it mean?": "Quick, low-cost evaluation methods like simplified usability testing - lower rigor but faster insights.",
+        "Why is it important?": "'Discount' Evaluation helps assess design quality and identify improvements.",
+        "When and/or where is it used?": "Applied during Evaluation phase to validate and improve designs."
+      }
+    }
+  ]
+}
