@@ -738,6 +738,197 @@
                 order: 2;
             }
         }
+
+        /* Tree View Styles */
+        .tree-container {
+            padding: 30px;
+            overflow: auto;
+            max-height: 70vh;
+        }
+
+        .tree-instructions {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 25px;
+            color: white;
+            text-align: center;
+        }
+
+        .tree-root {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .tree-node {
+            position: relative;
+            padding-left: 40px;
+            margin: 10px 0;
+        }
+
+        .tree-node-content {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 12px;
+            padding: 15px 20px;
+            cursor: move;
+            transition: all 0.3s ease;
+            color: white;
+            display: inline-block;
+            min-width: 250px;
+            position: relative;
+            user-select: none;
+        }
+
+        .tree-node-content:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateX(5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .tree-node-content.dragging {
+            opacity: 0.4;
+            transform: scale(0.95) rotate(3deg);
+        }
+
+        .tree-node-content.drag-over {
+            background: rgba(20, 184, 166, 0.4);
+            border-color: var(--accent);
+            transform: scale(1.05);
+        }
+
+        .tree-node-label {
+            font-weight: 600;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+
+        .tree-node-def {
+            font-size: 0.9em;
+            opacity: 0.9;
+            margin-top: 8px;
+            padding-top: 8px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .tree-children {
+            list-style: none;
+            padding-left: 30px;
+            margin-top: 10px;
+            position: relative;
+        }
+
+        .tree-children::before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1));
+        }
+
+        .tree-node::before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 30px;
+            width: 20px;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.4);
+        }
+
+        .tree-toggle {
+            position: absolute;
+            left: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 24px;
+            height: 24px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 0.8em;
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .tree-toggle:hover {
+            background: var(--primary);
+            transform: translateY(-50%) scale(1.15);
+        }
+
+        .tree-node.collapsed > .tree-children {
+            display: none;
+        }
+
+        .tree-category {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            font-size: 1.2em;
+            padding: 18px 25px;
+            cursor: default;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .tree-category:hover {
+            transform: none;
+        }
+
+        .drop-zone {
+            min-height: 60px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px dashed rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .drop-zone.drag-over {
+            background: rgba(20, 184, 166, 0.2);
+            border-color: var(--accent);
+            border-style: solid;
+        }
+
+        .tree-stats {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 20px;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .tree-stat-item {
+            text-align: center;
+        }
+
+        .tree-stat-value {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .tree-stat-label {
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
     </style>
 </head>
 <body>
@@ -783,6 +974,11 @@
                     <div class="mode-icon">🗂️</div>
                     <div class="mode-title">Model Categorization</div>
                     <p>Sort terms into model type categories</p>
+                </div>
+                <div class="mode-card" data-mode="tree">
+                    <div class="mode-icon">🌳</div>
+                    <div class="mode-title">Tree View</div>
+                    <p>Explore terms in a hierarchical tree structure</p>
                 </div>
             </div>
 
@@ -1027,6 +1223,9 @@
                     break;
                 case 'categorize':
                     renderCategorize(content);
+                    break;
+                case 'tree':
+                    renderTree(content);
                     break;
             }
 
@@ -1390,6 +1589,214 @@
                 }
 
                 return false;
+            }
+        }
+
+        function renderTree(container) {
+            // Organize terms by category with hierarchical structure
+            const categorizedTerms = {};
+            let totalTerms = 0;
+
+            // Filter terms by selected categories
+            let termsToShow = hciData.terms;
+            if (!selectedCategories.includes('all')) {
+                termsToShow = termsToShow.filter(term =>
+                    selectedCategories.includes(term.categoryId)
+                );
+            }
+
+            // Group terms by category
+            hciData.categories.forEach(category => {
+                const categoryTerms = termsToShow.filter(t => t.categoryId === category.id);
+                if (categoryTerms.length > 0) {
+                    categorizedTerms[category.id] = {
+                        category: category,
+                        terms: categoryTerms
+                    };
+                    totalTerms += categoryTerms.length;
+                }
+            });
+
+            container.innerHTML = `
+                <div class="tree-container">
+                    <div class="tree-instructions">
+                        <strong>🌳 Interactive Tree View:</strong> Explore HCI terms organized by category.
+                        Click the <span style="color: var(--accent);">●</span> buttons to expand/collapse branches.
+                        Drag and drop nodes to reorganize!
+                    </div>
+                    <ul class="tree-root" id="tree-root"></ul>
+                    <div class="tree-stats">
+                        <div class="tree-stat-item">
+                            <div class="tree-stat-value">${Object.keys(categorizedTerms).length}</div>
+                            <div class="tree-stat-label">Categories</div>
+                        </div>
+                        <div class="tree-stat-item">
+                            <div class="tree-stat-value">${totalTerms}</div>
+                            <div class="tree-stat-label">Total Terms</div>
+                        </div>
+                        <div class="tree-stat-item">
+                            <div class="tree-stat-value" id="tree-nodes-expanded">0</div>
+                            <div class="tree-stat-label">Expanded Nodes</div>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            const treeRoot = document.getElementById('tree-root');
+
+            // Build tree structure
+            Object.values(categorizedTerms).forEach(({ category, terms }) => {
+                // Find root terms (no parent) and terms with parents
+                const rootTerms = terms.filter(t => !t.parentTermId);
+                const childTerms = terms.filter(t => t.parentTermId);
+
+                // Create category node
+                const categoryNode = createTreeNode(
+                    category.name,
+                    `${terms.length} terms in this category`,
+                    null,
+                    true
+                );
+                categoryNode.querySelector('.tree-node-content').classList.add('tree-category');
+
+                const childrenContainer = document.createElement('ul');
+                childrenContainer.className = 'tree-children';
+
+                // Add root terms
+                rootTerms.forEach(term => {
+                    const termNode = createTreeNode(term.name, term.definition, term.id);
+
+                    // Find and add children of this term
+                    const children = childTerms.filter(t => t.parentTermId === term.id);
+                    if (children.length > 0) {
+                        const termChildren = document.createElement('ul');
+                        termChildren.className = 'tree-children';
+
+                        children.forEach(child => {
+                            const childNode = createTreeNode(child.name, child.definition, child.id);
+                            termChildren.appendChild(childNode);
+                        });
+
+                        termNode.appendChild(termChildren);
+                    }
+
+                    childrenContainer.appendChild(termNode);
+                });
+
+                categoryNode.appendChild(childrenContainer);
+                treeRoot.appendChild(categoryNode);
+            });
+
+            // Enable drag and drop
+            enableTreeDragDrop();
+            updateExpandedCount();
+        }
+
+        function createTreeNode(label, description, termId, isCategory = false) {
+            const li = document.createElement('li');
+            li.className = 'tree-node';
+            if (!isCategory) {
+                li.dataset.termId = termId;
+            }
+
+            const content = document.createElement('div');
+            content.className = 'tree-node-content';
+            content.draggable = !isCategory;
+
+            content.innerHTML = `
+                <div class="tree-node-label">${label}</div>
+                ${description ? `<div class="tree-node-def">${description.substring(0, 150)}${description.length > 150 ? '...' : ''}</div>` : ''}
+            `;
+
+            li.appendChild(content);
+
+            // Add toggle button if it will have children
+            const toggle = document.createElement('div');
+            toggle.className = 'tree-toggle';
+            toggle.innerHTML = '−';
+            toggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                li.classList.toggle('collapsed');
+                toggle.innerHTML = li.classList.contains('collapsed') ? '+' : '−';
+                updateExpandedCount();
+            });
+            content.appendChild(toggle);
+
+            return li;
+        }
+
+        function enableTreeDragDrop() {
+            let draggedElement = null;
+
+            document.querySelectorAll('.tree-node-content[draggable="true"]').forEach(node => {
+                node.addEventListener('dragstart', function(e) {
+                    draggedElement = this.closest('.tree-node');
+                    this.classList.add('dragging');
+                    e.dataTransfer.effectAllowed = 'move';
+                });
+
+                node.addEventListener('dragend', function(e) {
+                    this.classList.remove('dragging');
+                    document.querySelectorAll('.drag-over').forEach(el => {
+                        el.classList.remove('drag-over');
+                    });
+                });
+
+                node.addEventListener('dragover', function(e) {
+                    e.preventDefault();
+                    const currentNode = this.closest('.tree-node');
+                    if (currentNode !== draggedElement) {
+                        this.classList.add('drag-over');
+                    }
+                    e.dataTransfer.dropEffect = 'move';
+                });
+
+                node.addEventListener('dragleave', function(e) {
+                    if (!this.contains(e.relatedTarget)) {
+                        this.classList.remove('drag-over');
+                    }
+                });
+
+                node.addEventListener('drop', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    const targetNode = this.closest('.tree-node');
+                    if (targetNode === draggedElement || !draggedElement) {
+                        this.classList.remove('drag-over');
+                        return;
+                    }
+
+                    this.classList.remove('drag-over');
+
+                    // Get or create children container for target
+                    let childrenContainer = targetNode.querySelector(':scope > .tree-children');
+                    if (!childrenContainer) {
+                        childrenContainer = document.createElement('ul');
+                        childrenContainer.className = 'tree-children';
+                        targetNode.appendChild(childrenContainer);
+                    }
+
+                    // Move dragged element to new parent
+                    childrenContainer.appendChild(draggedElement);
+
+                    // Ensure target is expanded
+                    targetNode.classList.remove('collapsed');
+                    const toggle = targetNode.querySelector('.tree-toggle');
+                    if (toggle) {
+                        toggle.innerHTML = '−';
+                    }
+
+                    updateExpandedCount();
+                });
+            });
+        }
+
+        function updateExpandedCount() {
+            const expandedNodes = document.querySelectorAll('.tree-node:not(.collapsed) > .tree-children');
+            const countElement = document.getElementById('tree-nodes-expanded');
+            if (countElement) {
+                countElement.textContent = expandedNodes.length;
             }
         }
 
