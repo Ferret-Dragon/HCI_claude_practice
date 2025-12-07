@@ -29,3 +29,7 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.temp
+
+# Project specific
+finalexam_review_f2025.pdf
+README.md
