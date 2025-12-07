@@ -1439,12 +1439,75 @@
         function renderCategorize(container) {
             // Define model categories and their associated terms
             const modelCategories = {
-                'User Models': ['User Personas', 'Work Roles', 'User Classes', 'Social Models'],
-                'Usage Models': ['Flow Model', 'Hierarchical Task Inventory', 'Usage Scenarios', 'Step-by-Step Task Interaction Model'],
-                'Work Environment Models': ['Artifact Model', 'Physical Model'],
-                'UX Process': ['UX Lifecycle, the Wheel', 'Iteration', 'Analysis', 'Design', 'Prototyping', 'Evaluation'],
-                'Design Paradigms': ['Engineering Paradigm', 'Human-Information Processing (HIP) Paradigm', 'Design-Thinking Paradigm'],
-                'Evaluation Methods': ['Formative vs. Summative', 'Analytic vs. Empirical', 'Heuristic Evaluation', 'RITE']
+                'User Models': [
+                    'User Personas',
+                    'Work Roles',
+                    'User Classes',
+                    'Social Models',
+                    'Contextual Inquiry',
+                    'Empathy'
+                ],
+                'Usage Models': [
+                    'Flow Model',
+                    'Hierarchical Task Inventory',
+                    'Usage Scenarios',
+                    'Step-by-Step Task Interaction Model',
+                    'Task Analysis',
+                    'User Stories',
+                    'Use Cases',
+                    'User Journey Map'
+                ],
+                'Work Environment Models': [
+                    'Artifact Model',
+                    'Physical Model',
+                    'Ecological Perspective'
+                ],
+                'UX Process': [
+                    'UX Lifecycle, the Wheel',
+                    'Iteration',
+                    'Analysis',
+                    'Design',
+                    'Prototyping',
+                    'Evaluation',
+                    'Formative Evaluation',
+                    'Summative Evaluation'
+                ],
+                'Design Paradigms': [
+                    'Engineering Paradigm',
+                    'Human-Information Processing (HIP) Paradigm',
+                    'Design-Thinking Paradigm',
+                    'User-Centered Design (UCD)',
+                    'Participatory Design',
+                    'Ideation',
+                    'Sketching'
+                ],
+                'Evaluation Methods': [
+                    'Formative vs. Summative',
+                    'Analytic vs. Empirical',
+                    'Heuristic Evaluation',
+                    'RITE',
+                    'Usability Testing',
+                    'A/B Testing',
+                    'Think-Aloud Protocol'
+                ],
+                'Design Concepts': [
+                    'Affordances',
+                    'Conceptual Model',
+                    'Mental Model',
+                    'Feedback',
+                    'Constraints',
+                    'Metaphors',
+                    'Wireframe',
+                    'Mockup'
+                ],
+                'Usability Principles': [
+                    'Usability',
+                    'Learnability',
+                    'Efficiency',
+                    'Memorability',
+                    'Error Prevention',
+                    'Satisfaction'
+                ]
             };
 
             // Get terms that exist in our dataset
@@ -1461,9 +1524,9 @@
                 });
             });
 
-            // Shuffle terms for the pool
+            // Shuffle terms for the pool - increased from 12 to 24
             const shuffledTerms = [...availableTerms].sort(() => 0.5 - Math.random())
-                .slice(0, Math.min(12, availableTerms.length));
+                .slice(0, Math.min(24, availableTerms.length));
 
             // Create UI
             container.innerHTML = `
