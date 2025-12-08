@@ -1055,6 +1055,7 @@
         let currentQuestionIndex = 0;
         let userAnswers = [];
         let score = 0;
+        let wrongClicks = 0;
 
         // Initialize
         document.addEventListener('DOMContentLoaded', init);
@@ -1198,6 +1199,7 @@
             currentQuestionIndex = 0;
             userAnswers = new Array(questions.length).fill(null);
             score = 0;
+            wrongClicks = 0;
 
             // Show quiz screen
             document.getElementById('setup-screen').classList.add('hidden');
@@ -1299,6 +1301,7 @@
                         this.classList.add('correct');
                     } else {
                         this.classList.add('wrong');
+                        wrongClicks++;
                         document.querySelectorAll('.answer-option').forEach(o => {
                             if (o.dataset.answer === term.definition) {
                                 o.classList.add('correct');
@@ -1935,9 +1938,15 @@
                 message = '📚 Keep studying! You\'ll get there!';
             }
 
+            let wrongClicksMessage = '';
+            if (currentMode === 'multiple-choice' && wrongClicks > 0) {
+                wrongClicksMessage = `<br>Wrong answers clicked: <strong style="color: var(--danger);">${wrongClicks}</strong>`;
+            }
+
             document.getElementById('score-message').innerHTML = `
                 ${message}<br><br>
                 You got <strong>${correctAnswers}</strong> out of <strong>${questions.length}</strong> correct!
+                ${wrongClicksMessage}
             `;
         }
 
